@@ -1,17 +1,17 @@
 <template>
-    <div class="product">
+    <div class="product"  @mouseover="show_default = false" @mouseleave="show_default = true">
         <a>
             <router-link to="product-details">
                 <div class="gridPhoto">
                     <div class="grid-images">
                         <picture class="style-image">
-                            <img src="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_LF.jpg"
+                            <img v-bind:src="product.src_link_default"
                                 class="style-image" width="326" height="489">
                         </picture>
 
 
-                        <picture class="style-image_hover">
-                            <img src="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_LF.jpg"
+                        <picture class="style-image_hover" v-if="!show_default" @mouseleave="show_default = true">
+                            <img v-bind:src="product.src_link_second"
                                 class="style-image_hover" loading="eager">
                         </picture>
                     </div>
@@ -27,8 +27,8 @@
                     </div>
                 </div>
                 <div class="grid-content">
-                    <p class="name">Twins</p>
-                    <p class="price">₺2222</p>
+                    <p class="name">{{ product.title }}</p>
+                    <p class="price">₺{{product.price}}</p>
                     <p class="item-info">4 RENK</p>
                 </div>
             </router-link>
@@ -141,3 +141,22 @@
     text-transform: uppercase;
 }
 </style>
+<script>
+export default {
+    data() {
+        return {
+            show_default: true,
+        }
+    },
+    props: {
+        product: {
+            type: Object,
+            id: Number,
+            title: String,
+            price: String,
+            src_link_default: String,
+            src_link_second: String
+        }
+    }
+}
+</script>
