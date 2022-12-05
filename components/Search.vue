@@ -58,7 +58,7 @@
                         <div class="foto-ortası">
                             <div class="fLTzSD"><a
                                     href="https://www.camper.com/tr_TR/women/shoes/new_arrivals_women"
-                                    class="yazı-btn">Kadın</a></div>
+                                    class="yazi-btn">Kadın</a></div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                             </a></div>
                             <div class="foto-ortası">
                             <div class="fLTzSD"><a href="https://www.camper.com/tr_TR/men/shoes/new_arrivals_men"
-                                    class="yazı-btn">Erkek</a></div>
+                                    class="yazi-btn">Erkek</a></div>
                                 </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                             </a></div>
                             <div class="foto-ortası">
                                 <div class="fLTzSD"><a href="https://www.camper.com/tr_TR/kids/shoes/new_arrivals_kids"
-                                    class="yazı-btn">Çocuk</a></div>
+                                    class="yazi-btn">Çocuk</a></div>
                                 </div>
                             </div>
                 </div>
@@ -169,7 +169,6 @@
 
 }   
 .placeholder{
-    pointer-events: none;
     padding: 0;
     line-height: 72px!important;
     color: var(--color-black);
@@ -247,7 +246,6 @@
     opacity: 0;
     transition: all .3s;
     content: "";
-    pointer-events: none;
 }
 .fotolar-boşluklu{
     padding: 0 24px;
@@ -303,7 +301,6 @@
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    pointer-events: none;
     text-align: center;
 }
 .yazı-yeni{
@@ -313,10 +310,10 @@
     white-space: normal;
     font-weight: normal;
     font-family: ModerneMedium;
+    color: rgb(255, 255, 255);
 }
 @media screen and (min-width: 1440px) {
     .yazı-yeni{
-        color: rgb(255, 255, 255);
         font-size: 2em;
         text-shadow: unset;
     }
@@ -341,7 +338,13 @@
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
+    color: white;
 }
+
+.alışveriş-btn:hover{
+    text-decoration: none;
+    }
+
 .foto-ortası{
     z-index: 10;
     position: absolute;
@@ -355,10 +358,9 @@
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    pointer-events: none;
     text-align: center;
 }
-.yazı-btn{
+.yazi-btn{
     box-sizing: border-box;
     min-width: 140px;
     font-family: ModerneRegular;
@@ -369,12 +371,17 @@
     margin: 15px 4px 4px;
     appearance: none;
     border: none;
+    z-index: 500;
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
 }
+.yazi-btn:hover{
+    background-color: black;
+    color: white;
+}
 @media screen and (min-width: 1440px) {
-    .yazı-btn{
+    .yazi-btn{
         box-shadow: unset;
         color:black;
         background-color: rgb(255, 255, 255);
@@ -395,6 +402,7 @@ input{
 }
 
 </style>
+
 
 
 
