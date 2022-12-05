@@ -8,52 +8,53 @@
                 <div class="tnm--desktop">
                     <a 
                         class="logo">
-                        <router-link to="/">
+                        <NuxtLink to="/">
                             <img alt="Camper"
                             src="https://www.camper.com/cms/api/assets/tiers-banners-homes/03158e4d-c9ae-4945-8a35-cb1362d17021/camper-logo.svg">
-                        </router-link>
+                        </NuxtLink>
                         </a>
                         
-                    <div class="alt_kategoriler"><span class="tnm__title ">
+                    <div class="alt_kategoriler"><span class="tnm__title cizgili-main ">
                         <a
                                
-                                class="kategori-isim ">
-                                <router-link to="/women">
+                                class="kategori-isim cizgililer">
+                                <NuxtLink to="/products">
                                     Kadın
-                                </router-link>
+                                </NuxtLink>
                             </a>
 
 
                         </span></div>
-                        <div class="alt_kategoriler"><span class="tnm__title "><a
+                        <div class="alt_kategoriler"><span class="tnm__title cizgili-main  "><a
                                
-                                class="kategori-isim "> 
-                                <router-link to="/women">
+                                class="kategori-isim cizgililer "> 
+                                <NuxtLink to="/products">
                                     Erkek
-                                </router-link>
+                                </NuxtLink>
                             </a>
                             <div class="tnm-highlights"></div>
                         </span>
                     </div>
                     
-                    <div class="alt_kategoriler"><span class="tnm__title "><a
-                        class="kategori-isim ">
-                                <router-link to="/women">Çocuk
+                    <div class="alt_kategoriler"><span class="tnm__title cizgili-main "><a
+                        class="kategori-isim cizgililer">
+                                <NuxtLink to="/products">Çocuk
                                     
-                                </router-link>
+                                </NuxtLink>
                             </a>
                            
                         </span></div>
-                        <div class="alt_kategoriler"><span class="tnm__title "><a
+                        <div class="alt_kategoriler"><span class="tnm__title cizgili-main "><a
                                
-                                 class="kategori-isim ">
-                                 <router-link to="/women">Camperlab</router-link>
+                                 class="kategori-isim cizgililer">
+                                 <NuxtLink to="/products">Camperlab</NuxtLink>
                                 </a>
                                 
                             </span></div>
                             
                     <div class="arama">
-                        <a href="https://www.camper.com/tr_TR/search" class="sc-dSnXvR dzBcKB last-item">
+                        <a class="sc-dSnXvR dzBcKB last-item">
+                            <NuxtLink to="/search-page">
                             <span class="searcherspan">
                                 <input type="text"
                                 placeholder="ARAMA" class="searcher">
@@ -63,12 +64,13 @@
                                         width="17px" height="17px">
                                     </span>
                                 </span>
-                                
+                            </NuxtLink>
                             </a>
-                        <a href="https://www.camper.com/tr_TR/shops" class="mağaza-bul">Mağaza bul</a>
+                            
+                            <span class="cizgili-main"><a href="https://www.camper.com/tr_TR/shops" class="mağaza-bul cizgililer">Mağaza bul</a></span>
 
                         <div class="hesap">
-                            <div class="account-icon"><span class="label">Hesabım</span></div>
+                            <div class="account-icon cizgili-main"><span class="label cizgililer">Hesabım</span></div>
                         </div>
                         
                     </div>
@@ -79,6 +81,19 @@
 </ClientOnly>
 </template>
 <style>
+.cizgili-main>.cizgililer::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-top: 4px solid red;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    width: 0;
+    }
+    .cizgili-main:hover>.cizgililer::after {
+    width: 100%;
+    }
 
 .logo img{
     width:64px;
@@ -127,7 +142,7 @@
         }
      }
 
-     .tnm__title>a::after {
+     .tnm__title>a::after{
         position: absolute;
         bottom: 0;
         left: 0;
