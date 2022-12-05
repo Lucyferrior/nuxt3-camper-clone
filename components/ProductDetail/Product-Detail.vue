@@ -5,6 +5,11 @@
                 <ProductDetailPhoto v-for="item in 5" />
             </div>
         </div>
+        <div class="div_column product_info_style">
+            <div>
+                <ProductDetailInfo/>
+            </div>
+        </div>
     </div>
 </template>
 <style scoped>
