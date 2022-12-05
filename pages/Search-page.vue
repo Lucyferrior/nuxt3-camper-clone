@@ -1,2 +1,3 @@
 <template>
+    <Search></Search>
 </template>
