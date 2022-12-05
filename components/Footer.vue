@@ -186,7 +186,6 @@
     z-index: 1;
     position: relative;
     background-color: rgb(223, 223, 223);
-    bottom: 0;
     position: absolute;
 }
 .üç-div{
