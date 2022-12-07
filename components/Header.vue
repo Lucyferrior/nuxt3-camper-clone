@@ -72,6 +72,14 @@
                         <div class="hesap">
                             <div class="account-icon cizgili-main"><span class="label cizgililer">Hesabım</span></div>
                         </div>
+
+                        <div class="sc-cGKJhA fTwFWY">
+                            <div class="sepet-icon">
+                            <a href="/tr_TR/bolsa" class="icon-link">
+                                <span class="sepet-sayı">2</span>
+                            </a>
+                        </div>
+                            </div>
                         
                     </div>
                 </div>
@@ -80,7 +88,46 @@
     </header>
 </ClientOnly>
 </template>
+
 <style>
+.icon-link:hover{
+    background-color: black;
+    color: white;
+    
+    }
+@media screen and (min-width: 992px) {
+    .sepet-sayı{
+        font-size: var(--xsmall-size);
+        transform: translate(0);
+        position: relative;
+    }}
+.sepet-sayı{
+    font-family: ModerneRegular,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    display: inline-block;
+    text-align: center;
+    vertical-align: -webkit-baseline-middle;
+    color: var(--color-black);
+}
+@media screen and (min-width: 992px) {
+    .icon-link{
+        background-size: 16px auto;
+        width: 18px;
+        background-position: 50% 20%;
+    }
+ }
+.icon-link{
+    background: url(@/assets/shop-trigger.svg) 50% no-repeat;
+    height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sepet-icon{
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+}
 .cizgili-main>.cizgililer::after {
     position: absolute;
     bottom: 0;
