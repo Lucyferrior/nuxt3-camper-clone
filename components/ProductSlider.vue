@@ -1,22 +1,15 @@
 <template>
 
     <div class="slick-slider">
-        <button type="button" class="slick-arrow slick-prev" style="display: block;">
+        <button type="button" class="slick-arrow slick-prev" style="display: block;" @click="saga_cek()">
             Previous
         </button>
         <div class="slick-list">
-            <div class="slick-track" style="">
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
-                    <Product class="product" :product="productSample" />
+            <div id="slider-recommended" class="slick-track" v-bind:style="getLeft()">
+                <Product class="product" v-for="item in recommending" v-bind:key="item.id" :product="item" />
             </div>
         </div>
-        <button type="button" class="slick-arrow slick-next" style="display: block;">
+        <button type="button" class="slick-arrow slick-next" style="display: block;" @click="sola_cek()">
             Next
         </button>
     </div>
@@ -24,13 +17,14 @@
 <style>
 .product {
     display: block;
-    flex: 0 0 20%;
+    width: 450px;
 }
 
 .slick-track {
     display: flex;
     position: relative;
-    width: 100%;
+    max-width: none;
+    transition: left 500ms ease-in;
 }
 
 
@@ -53,10 +47,12 @@
     left: 25px;
     transform: rotate(90deg);
 }
-.slick-next{
+
+.slick-next {
     right: 25px;
     transform: rotate(-90deg);
 }
+
 .slick-arrow {
     z-index: 200;
     display: block;
@@ -77,18 +73,69 @@
     width: 100%;
 }
 </style>
+
 <script>
 export default {
     data() {
         return {
-            productSample:
-            {
-                id: 1,
-                title: "Twins",
-                price: 2499,
-                src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_LF.jpg",
-                src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_CF.jpg"
-            },
+            _left_value: 0,
+            recommending: [
+                {
+                    id: 1,
+                    title: "Twins",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_CF.jpg"
+                },
+                {
+                    id: 2,
+                    title: "Runner K21",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_CF.jpg"
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_CF.jpg"
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_CF.jpg"
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_CF.jpg"
+                },
+            ]
+        }
+    },
+    methods: {
+        hareket_hesapla() {
+            var kaydir = document.querySelector(".product").offsetWidth
+            return kaydir;
+        },
+        sola_cek(event) {
+            this._left_value -= this.hareket_hesapla();
+        },
+        saga_cek(event) {
+            var kaydir = this.hareket_hesapla();
+            if(this._left_value < 0){
+                this._left_value += this.hareket_hesapla();
+            }else{
+                this._left_value = 0
+            }
+        },
+        getLeft() {
+            return "left:" + this._left_value + "px;";
         }
     }
 }
