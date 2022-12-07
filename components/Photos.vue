@@ -3,9 +3,17 @@
         <div class="kZdCIz">
             <div class="bMmwdY">
                 <div class="fZqon"><a class="trackable " href="https://www.camper.com/tr_TR/landings/teix">
-                        <picture>
+                        <picture v-if="pht.type === 'img'">
                             <img :src="pht.srclink" alt="Teix" width="2000px" height="1125px" class="foto">
                         </picture>
+                        <video v-else autoplay="" loop="" class="backgroundvideo" title="13. Sayı - Ydra" muted=""
+                            playsinline=""
+                            poster="https://www.camper.com/cms/api/assets/tiers-banners-homes/811bfaac-8bda-4170-838c-ef3f3827447c/T95-TWS-13-YDRA_Desktop.avif">
+                            <source
+                                type="video/webm"
+                                :src="pht.srclink">
+                            
+                        </video>
                     </a></div>
                 <div class="yazı-content-center">
                     <h1 class="yazı-h1">{{ pht.title }}</h1>
@@ -26,6 +34,7 @@ export default {
         pht: {
             title: String,
             srclink: String,
+            type: String,
             btns: [
                 {
                     text: String,
@@ -39,9 +48,10 @@ export default {
 }
 </script>
 <style>
-.sc-amiJK{
+.sc-amiJK {
     display: flex;
 }
+
 .koMYY {
     position: relative;
     display: grid;
