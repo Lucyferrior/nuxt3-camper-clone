@@ -7,12 +7,22 @@
         </div>
         <div class="div_column product_info_style">
             <div>
-                <ProductDetailInfo/>
+                <ProductDetailInfo />
             </div>
+        </div>
+
+        <div id="recomendor" class="">
+            <h3 class="style_title__1UeK5">
+                BU ÜRÜNLERLE DE İLGİLENEBİLİRSİNİZ
+            </h3>
+            <ProductSlider/>
         </div>
     </div>
 </template>
 <style scoped>
+#recomendor{
+    width: 100%;
+}
 .div_column {
     min-height: 1px;
     position: relative;

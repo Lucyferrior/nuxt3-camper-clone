@@ -38,23 +38,7 @@
 <style scoped>
 .product {
     display: block;
-    flex: 0 0 50%;
-    max-width: 50%;
     position: relative;
-}
-
-@media screen and (min-width: 768px) {
-    .product {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .product {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
 }
 
 .sizes {
@@ -118,7 +102,8 @@
 
 
 .style-image_hover {
-    min-width: 100%;
+    min-width: auto;
+    width: 100%;
 }
 
 .grid-content {

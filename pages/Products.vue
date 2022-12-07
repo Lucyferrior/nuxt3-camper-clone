@@ -5,12 +5,29 @@
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 #product_container {
     display: flex;
     row-gap: 0;
     overflow: hidden;
     flex-flow: row wrap;
+}
+.product{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+@media screen and (min-width: 768px) {
+    .product {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .product {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
 }
 </style>
 <script>
@@ -32,6 +49,20 @@ export default {
                     price: 2499,
                     src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg",
                     src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_CF.jpg"
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_CF.jpg"
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_LF.jpg",
+                    src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_CF.jpg"
                 },
                 {
                     id: 3,

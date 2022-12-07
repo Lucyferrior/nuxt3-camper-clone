@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="height: 100%;">
         <div id="title_wrapper">
             <h1>Twins</h1>
             <h2>₺2.699</h2>
@@ -26,7 +26,8 @@
                 </div>
             </div>
         </div>
-        <div id="sizes_div" class="div-row">
+
+        <div id="sizes_div" class="">
             <div id="sizes">
                 <h4 class="sizesTitle">
                     <div class="top_wrapper">
@@ -42,19 +43,69 @@
                     </div>
                 </h4>
             </div>
+            <div id="size_list_wrapper">
+                <ul id="size_list_items" v-if="false">
+                    <li class="size_list_item"><span
+                            class="size_list_span size_number_available ant-tooltip-open">40</span></li>
+                    <li class="size_list_item"><span class="size_list_span size_number_not_available">41</span></li>
+                    <li class="size_list_item"><span class="size_list_span size_number_limited">42</span></li>
+                </ul>
+                <ul id="size_list_items">
+                    <li class="size_list_item"> <HelperComponentsButton classes="reverse"/></li>
+                </ul>
+            </div>
+            <p id="limited_sized_label">*Az adetli</p>
         </div>
-        <div id="size_list_wrapper">
-            <ul id="size_list_items">
-                <li class="size_list_item">
-                    <span class="size_list_span">39</span>
-                </li>
-            </ul>
+        <div class="sticky-col">
+            <div id="add_to_card">
+                <HelperComponentsButton text="sepete ekle" classes="my_btn" />
+                <p id="card_extra_info_labal">3,6 veya 8 taksit ile ödeme imkanı</p>
+            </div>
+            <div class="add_wish_list_wrapper">
+                <svg height="14" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 12.579l5.922-5.553h0A3.5 3.5 0 108.73 2.36l-.729.828-.73-.828a3.5 3.5 0 10-5.193 4.666h0z"
+                        fill="none" stroke="#1d1d1b"></path>
+                </svg>
+                <span class="add_wish_list_span">İstek Listesine Ekle</span>
+            </div>
         </div>
     </div>
-
 </template>
+<style>
 
+.my_btn {
+    text-transform: uppercase;
+}
+
+</style>
 <style scoped>
+.sticky-col{
+    position: sticky;
+    top: 42px;
+    z-index: 49;
+    transition: top .2s ease-in-out;
+}
+.add_wish_list_wrapper{
+    margin-top: 24px;
+    align-items: center;
+    display: flex;
+    font-size: .75em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.add_wish_list_span{
+    margin-left: 1em;
+}
+#card_extra_info_labal {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 8px 0;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
 #title_wrapper>h1 {
     font-size: 1em;
     font-weight: 400;
@@ -63,11 +114,38 @@
     justify-content: space-between;
 }
 
-.size_list_span {
-    border: 1px solid var(--color-divider);
+#limited_sized_label {
+    color: red;
+    font-size: .875em;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
 
+.size_number_limited:hover,
+.size_number_available:hover {
+    background-color: black;
+    color: white;
+}
+
+.size_number_not_available {
+    color: #919191;
+    background: url(@/assets/del-line.svg) 50% no-repeat;
+}
+
+.size_number_limited {
+    color: red;
+}
+
+.size_list_span {
     text-align: center;
-    outline: none;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 8px;
+    cursor: pointer;
+    padding: 0 7px;
+    border: 1px solid #d9d9d9;
+    opacity: 1;
+    transition: all .3s;
 }
 
 .size_list_item {
@@ -81,7 +159,8 @@
     font-size: .875em;
     position: relative;
 }
-#size_list_wrapper::after{
+
+#size_list_wrapper::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -207,7 +286,9 @@ b {
 </style>
 
 <script>
+
 export default {
     name: "product-info-vue"
 }
+
 </script>
