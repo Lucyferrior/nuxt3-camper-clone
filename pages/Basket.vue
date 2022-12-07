@@ -23,11 +23,44 @@
                     <BasketProduct />
                 </div>
             </div>
+            <div class="related">
+                <div class="related_content">
+                    <div class="related_header">
+                        <h2 class="related_title">Tercihe bağlı ekstralar ve aksesuarlar</h2>
+                        <ul class="related_nav">
+                            <li class="related_nav_item related_nav_item_active">En çok tercih edilenler
+                            </li>
+                            <li class="related_nav_item">Bagciklar</li>
+                            <li class="related_nav_item">Kıyafetler</li>
+                        </ul>
+                    </div>
+                    <div id="articleListRecomendation">
+                        <ProductSlider :items="products" />
+                    </div>
+                </div>
+            </div>
         </div>
+        <BasketSepetOnay/>
     </div>
 </template>
 
 <style>
+.related_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 1em;
+}
+.related{
+    margin: 40px auto 0;
+}
+.related_header{
+    text-align: center;
+}
+.related_title{
+    font-size: 1.5em;
+}
 .shopping_bag_wrapper {
     margin: 28px auto 0;
     max-width: 75%;
@@ -95,9 +128,54 @@
     align-items: center;
     display: flex;
 }
+@media screen and (min-width: 1280px) {
+    .related {
+        margin: 80px auto 0;
+    }
+}
 </style>
 <style scoped>
 p {
     margin-bottom: 1em;
 }
 </style>
+<script>
+export default {
+    data() {
+        return {
+            products: [
+                {
+                    id: 1,
+                    title: "Twins",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+                },
+                {
+                    id: 2,
+                    title: "Runner K21",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+                },
+                {
+                    id: 3,
+                    title: "Runner",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+                },
+            ]
+        };
+    }
+}
+</script>
