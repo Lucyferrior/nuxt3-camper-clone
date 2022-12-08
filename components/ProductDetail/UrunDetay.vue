@@ -20,7 +20,7 @@
                         </svg></span>
                     <h3>AÇIKLAMA</h3>
                 </div>
-                <div class="content-hidden" role="tabpanel"
+                <div class="content-hidden gizlenebilir"  role="tabpanel"
                     style="">
                     <div class="yazı-genel"><span class="acıklama">XL EXTRALIGHT® Organix™ dış
                             tabanlı (%30 biyolojik bazlı şeker kamışı) beyaz, boyanmamış deri ve süet kadın spor
@@ -37,7 +37,7 @@
                         </svg></span>
                     <h3>Özellikler</h3>
                 </div>
-                <div class="yazı-buyuk" role="tabpanel"
+                <div class="yazı-buyuk gizlenebilir" role="tabpanel"
                     style="">
                     <div class="yazı-genel">
                         <div class="content-feature"><span><b>Üst Kısım</b><br>Deri / Nubuk</span></div>
@@ -60,7 +60,7 @@
                         </svg></span>
                     <h3>AYAKKABI BAKIMI</h3>
                 </div>
-                <div class="yazı-buyuk" role="tabpanel"
+                <div class="yazı-buyuk gizlenebilir" role="tabpanel"
                     style="">
                     <div class="yazı-genel">
                         <div class="content-feature">Camper ayakkabılar uzun süre dayanıklı olmaları için üst
@@ -88,6 +88,16 @@
     background-color: transparent;
     border-top: 0;
     color: #000;
+}
+.gizlenebilir{
+    height: 0;
+    overflow: hidden;
+}
+
+.select-yazı:hover .gizlenebilir{
+    height: min-content;
+    transition: all .3 ease-in;
+
 }
 @media screen and (min-width: 1440px) {
     .acıklama{
@@ -160,7 +170,7 @@ svg:not(:root) {
 }
 .select{
     border-top: 1px solid var(--color-divider);
-    background-color: var(--color-white);
+    background-color: white;
     border: 0;
     border-radius: 0;
     box-sizing: border-box;
