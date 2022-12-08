@@ -75,9 +75,10 @@
 
                             <div class="sc-cGKJhA fTwFWY">
                                 <div class="sepet-icon">
-                                    <a href="/tr_TR/bolsa" class="icon-link">
+                                    <NuxtLink to="basket">
                                         <span class="sepet-sayı">2</span>
-                                    </a>
+                                    </NuxtLink>
+                                   
                                 </div>
                             </div>
 
