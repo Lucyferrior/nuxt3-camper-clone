@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bread">
+        <div class="breadcrumb_wrapper">
             <span>
             <span class="ant-breadcrumb-link"><a
                         href="/tr_TR/">CAMPER</a>
@@ -14,12 +14,13 @@
 
         <div id="product_container">
             <div class="product-list">
-                <h1 class="yazı">Kadın Ayakkabıları</h1>
+                <h1 class="yazi">Kadın Ayakkabıları</h1>
                 <h2 class="desc"></h2>
             </div>
             <div id="plp-filter-nav" class="filter" style="top: 42px;">
                 <div class="filters-row" style="row-gap: 0px;">
-                    <div><button type="button"
+                    <div>
+                        <button type="button"
                             class="buton">
                             <div><svg height="13" viewBox="0 0 16 13" width="16">
                                     <g fill="none" fill-rule="evenodd">
@@ -32,7 +33,7 @@
                                     </g>
                                 </svg> <span>Filtre </span></div>
                         </button></div>
-                    <div class="style_sortsDiv__1Eee6"><span class="filter-text">97<!-- --> <!-- -->ÜRÜNLER<!-- -->
+                    <div class="sorts_div"><span class="filter-text">97<!-- --> <!-- -->ÜRÜNLER<!-- -->
                         </span>
                         <span class="filter-text">
                             <span class="sortdivider">
@@ -89,7 +90,6 @@
     transition: all .3s cubic-bezier(.645,.045,.355,1);
     user-select: none;
     touch-action: manipulation;
-    border: 1px solid #d9d9d9;
 
 }
 .sortdivider{
@@ -121,13 +121,12 @@ svg:not(:root) {
     align-items: center;
 }
 .buton{
-    
-    padding: 0 0 0 2px;
-    margin-right: 0;
+    -webkit-appearance: button;
+    padding-left: 2px;
     margin-top: 1.5px;
-    font-size: var(--heading-1-size);
+    font-size: 1em;
     text-transform: uppercase;
-    color: #000;
+    color: black;
     background: transparent;
     border-color: transparent;
     box-shadow: none;
@@ -144,9 +143,7 @@ svg:not(:root) {
     transition: all .3s cubic-bezier(.645,.045,.355,1);
     user-select: none;
     touch-action: manipulation;
-    border: 1px solid #d9d9d9;
     overflow: visible;
-    margin: 0;
 }
 .filters-row>div:first-child{
     display: inline-flex;
@@ -158,8 +155,8 @@ svg:not(:root) {
     position: sticky;
     bottom: 0;
     padding: 8px 24px 8px 22px;
-    background-color: var(--color-white);
-    font-size: var(--description-size);
+    background-color: white;
+    font-size: .75em;
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -184,16 +181,11 @@ svg:not(:root) {
     font-size: .75em;
     max-width: 460px;
 }
-.yazı{
-    padding: 0 30px;
-    text-align: center;
-    margin: 30px auto auto;
-    font-size: 1.5em;
-}
-.bread>span:last-child{
+
+.breadcrumb_wrapper>span:last-child{
     color: black;
 }
-.bread a{
+.breadcrumb_wrapper a{
     color: rgba(0,0,0,.45);
     transition: color .3s;
     text-decoration: none;
@@ -211,13 +203,21 @@ svg:not(:root) {
     position: relative;
     min-height: 1px;
 }
-.bread>span{
-    background-color: var(--color-grey-light);
+.product-list>.yazi{
+    text-transform: lowercase;
+    padding: 0 30px;
+    text-align: center;
+    margin: 30px auto auto;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.breadcrumb_wrapper>span{
+    background-color: #dfdfdf;
     margin: 5px 5px 5px 0;
     padding: 6px 16px;
 }
-.bread{
-    font-size: var(--small-size);
+.breadcrumb_wrapper{
+    font-size: .625em;
     padding: 5px 16px;
     text-transform: uppercase;
     text-align: center;
@@ -244,6 +244,11 @@ svg:not(:root) {
     .product {
         flex: 0 0 25%;
         max-width: 25%;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .filters-row span{
+        font-size: 10px;
     }
 }
 </style>
