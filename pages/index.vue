@@ -32,12 +32,12 @@ export default {
                 btns: [
                     {
                         text:"Kadın",
-                        link:"product",
+                        link:"products",
                         type:"normal"
                     },
                     {
                         text:"Erkek",
-                        link:"product",
+                        link:"products",
                         type:"normal"
                     }
                 ],
@@ -52,7 +52,7 @@ export default {
                 btns: [
                     {
                         text:"Kadın",
-                        link:"product",
+                        link:"products",
                         type:"reverse"
                     }
                 ],
@@ -66,7 +66,7 @@ export default {
                 btns: [
                     {
                         text:"Koleksiyonu Keşfet",
-                        link:"product",
+                        link:"products",
                         type:"reverse"
                     }
                 ],

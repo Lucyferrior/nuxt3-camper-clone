@@ -2,7 +2,7 @@
     <div class="koMYYi">
         <div class="kZdCIz">
             <div class="bMmwdY">
-                <div class="fZqon"><a class="trackable " href="https://www.camper.com/tr_TR/landings/teix">
+                <div class="fZqon"><NuxtLink class="trackable " to="products">
                         <picture v-if="pht.type === 'img'">
                             <img :src="pht.srclink" alt="Teix" width="2000px" height="1125px" class="foto">
                         </picture>
@@ -14,13 +14,13 @@
                                 :src="pht.srclink">
                             
                         </video>
-                    </a></div>
+                    </NuxtLink></div>
                 <div class="yazı-content-center">
                     <h1 class="yazı-h1">{{ pht.title }}</h1>
                     <h3 class="yazı-h3">{{ pht.subtitle }}</h3>
                     <div class="sc-amiJK fLTzSD">
                         <span v-for="item in pht.btns" v-bind:key="item.id">
-                            <HelperComponentsButton :classes="item.type" :text="item.text" />
+                            <HelperComponentsButton :classes="item.type" :text="item.text" :link="item.link"/>
                         </span>
                     </div>
                 </div>
@@ -48,6 +48,9 @@ export default {
 }
 </script>
 <style>
+.backgroundvideo{
+    width: 100%;
+}
 .sc-amiJK {
     display: flex;
 }
@@ -94,7 +97,7 @@ export default {
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    pointer-events: none;
+    
     text-align: center;
 }
 
@@ -105,7 +108,7 @@ export default {
     white-space: normal;
     font-weight: normal;
     font-family: ModerneMedium;
-    pointer-events: none;
+    
 }
 
 @media screen and (min-width: 1440px) {
@@ -133,36 +136,6 @@ export default {
     }
 }
 
-.buton {
-    box-sizing: border-box;
-    min-width: 140px;
-    pointer-events: initial;
-    font-family: ModerneLight;
-    font-weight: normal;
-    width: auto;
-    text-decoration: none;
-    white-space: normal;
-    margin: 15px 4px 4px;
-    appearance: none;
-    border: none;
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-@media screen and (min-width: 1440px) {
-    .buton {
-        text-shadow: unset;
-        color: rgb(255, 255, 255);
-        background-color: black;
-        font-size: 1em;
-    }
-}
-
-.buton:hover {
-    background: white;
-    color: black;
-}
 </style>
 
 <style scoped>
