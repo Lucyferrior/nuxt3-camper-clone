@@ -19,10 +19,21 @@
             </div>
             <div class="loading">
                 <div class="container">
-                    <BasketProduct />
-                    <BasketProduct />
-                    <BasketProduct />
-                    <BasketProduct />
+                    <BasketProduct title="Runner K21"
+                        subtitle="27205-247"
+                        price="2049"
+                        size="39"
+                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg"/>
+                        <BasketProduct title="Runner K21"
+                        subtitle="27205-247"
+                        price="2049"
+                        size="39"
+                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg"/>
+                        <BasketProduct title="Runner K21"
+                        subtitle="27205-247"
+                        price="2049"
+                        size="39"
+                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg"/>
                 </div>
             </div>
             <div class="related">
@@ -53,6 +64,9 @@
 .related_nav_item{
     list-style: none;
     margin: 6px;
+}
+.product{
+    flex: 0 0 10%;
 }
 .related_nav {
     display: flex;

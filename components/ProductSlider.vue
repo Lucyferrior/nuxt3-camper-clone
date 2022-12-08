@@ -5,7 +5,6 @@
         </button>
         <div class="slick-list">
             <div id="slider-recommended" class="slick-track" v-bind:style="getLeft()">
-                
                 <Product class="product" v-for="item in items" v-bind:key="item.id" :product="item"/>
             </div>
         </div>
@@ -16,10 +15,8 @@
 </template>
 <style scoped>
 .product {
-    display: flex;
-    flex: 0 0 40%;
-    margin-right: 20px;
-    max-width: 182px;
+    display: block;
+    width: 450px;
 }
 
 .slick-track {

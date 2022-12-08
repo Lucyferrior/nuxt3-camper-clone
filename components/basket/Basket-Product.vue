@@ -1,22 +1,21 @@
 <template>
     <div class="shopping_bag_row_item" style="row-gap: 0px;">
         <div class="ant-col">
-            <a href="https://www.camper.com/tr_TR/women/shoes/twins/camper-twins-K201311-024">
+            <NuxtLink to="product-details">
                 <picture>
-                    <img src="https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/K201311-024_L.jpg"
-                        alt="Image of thumbnail image 0 of K201311-024" class="item-thumbnail">
+                    <img :src="src_link" class="item-thumbnail">
                 </picture>
-            </a>
+            </NuxtLink>
         </div>
         <div class="ürün-genel">
             <div class="yazı-genel">
-                <p class="name">Twins</p>
-                <p class="kod">K201311-024</p>
+                <p class="name">{{title}}</p>
+                <p class="kod">{{subtitle}}</p>
                 <div class="bilgi">
                     <div>
                         <span class="size">Size</span>
                         <button type="button" class="beden">
-                            <span>40</span>
+                            <span>{{size}}</span>
                             <svg height="6" viewBox="0 0 18 9" width="11">
                                 <path d="m4-4 3.67495264 3.67495264 4.32504736 4.32504736-8 8" fill="none" stroke="#000"
                                     stroke-linecap="square" transform="matrix(0 1 -1 0 12.96 -3.141463)"></path>
@@ -24,7 +23,7 @@
                         </button>
                     </div>
                     <span class="price">
-                        <span data-ge-basket-productsaleprice="data-ge-basket-productsaleprice">₺2.699,00
+                        <span data-ge-basket-productsaleprice="data-ge-basket-productsaleprice">₺{{price}}
                         </span>
                     </span>
                 </div>
@@ -42,6 +41,17 @@
         </div>
     </div>
 </template>
+<script>
+    export default{
+        props:{
+            title: String,
+            subtitle: String,
+            size: String,
+            price: String,
+            src_link: String
+        }
+    }
+</script>
 <style>
 .beden::before{
     position: absolute;
