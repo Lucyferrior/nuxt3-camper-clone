@@ -65,6 +65,7 @@
                 </svg>
                 <span class="add_wish_list_span">İstek Listesine Ekle</span>
             </div>
+            <UrunDetay/>
         </div>
     </div>
 </template>
@@ -283,9 +284,12 @@ b {
 </style>
 
 <script>
+import UrunDetay from './UrunDetay.vue';
+
 
 export default {
-    name: "product-info-vue"
+    name: "product-info-vue",
+    components: { UrunDetay }
 }
 
 </script>

@@ -21,6 +21,8 @@
                 <div class="container">
                     <BasketProduct />
                     <BasketProduct />
+                    <BasketProduct />
+                    <BasketProduct />
                 </div>
             </div>
             <div class="related">
@@ -45,6 +47,13 @@
 </template>
 
 <style>
+.related_nav_item_active{
+    text-decoration: underline;
+}
+.related_nav_item{
+    list-style: none;
+    margin: 6px;
+}
 .related_nav {
     display: flex;
     flex-wrap: wrap;
@@ -131,6 +140,12 @@
 @media screen and (min-width: 1280px) {
     .related {
         margin: 80px auto 0;
+    }
+    .related_nav_item{
+        font-size: .75em;
+    }
+    .shopping_bag_wrapper{
+        grid-gap: 90px;
     }
 }
 </style>

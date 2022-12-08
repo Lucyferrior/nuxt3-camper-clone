@@ -5,7 +5,8 @@
         </button>
         <div class="slick-list">
             <div id="slider-recommended" class="slick-track" v-bind:style="getLeft()">
-                <Product class="product" v-for="item in items" v-bind:key="item.id" :product="item" :type="shoe"/>
+                
+                <Product class="product" v-for="item in items" v-bind:key="item.id" :product="item"/>
             </div>
         </div>
         <button type="button" class="slick-arrow slick-next" style="display: block;" @click="sola_cek()">
@@ -15,8 +16,10 @@
 </template>
 <style>
 .product {
-    display: block;
-    width: 450px;
+    display: flex;
+    flex: 0 0 40%;
+    margin-right: 20px;
+    max-width: 182px;
 }
 
 .slick-track {

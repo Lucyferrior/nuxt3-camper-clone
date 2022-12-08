@@ -6,25 +6,23 @@
                 <div class="secim">
                     <div class="select-selector">
                         <span class="selection-search">
-                        <input type="search"
-                                autocomplete="off" class="search-input" style="opacity:0"
-                                role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="rc_select_0_list"
-                                aria-autocomplete="list" aria-controls="rc_select_0_list"
+                            <input type="search" autocomplete="off" class="search-input" style="opacity:0"
+                                role="combobox" aria-expanded="false" aria-haspopup="listbox"
+                                aria-owns="rc_select_0_list" aria-autocomplete="list" aria-controls="rc_select_0_list"
                                 aria-activedescendant="rc_select_0_list_-1" value="" readonly="true" unselectable="on"
                                 id="rc_select_0">
-                            </span>
-                                <span class="selection-item">
+                        </span>
+                        <span class="selection-item">
                             <div class="shipmentWrapper">
-                                <p class="select-label"><span></span><br><span
-                                        class="description"></span></p><span
-                                    class="shipmentprice">ücretsiz<svg height="9" viewBox="0 0 18 9"
-                                        width="18">
+                                <p class="select-label"><span></span><br><span class="description"></span></p><span
+                                    class="shipmentprice">ücretsiz<svg height="9" viewBox="0 0 18 9" width="18">
                                         <path d="m4-4 3.67495264 3.67495264 4.32504736 4.32504736-8 8" fill="none"
                                             stroke="#000" stroke-linecap="square"
                                             transform="matrix(0 1 -1 0 12.96 -3.141463)"></path>
                                     </svg></span>
                             </div>
-                        </span></div>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="nested-loading">
@@ -32,8 +30,7 @@
                     <div class="icon-position-right" role="tablist">
                         <div class="item-active">
                             <div class="collapse-header" role="tab" tabindex="0" aria-expanded="true"><span
-                                    class="collapse-arrow"><svg height="9" viewBox="0 0 18 9"
-                                        width="18">
+                                    class="collapse-arrow"><svg height="9" viewBox="0 0 18 9" width="18">
                                         <path d="m4-4 3.67495264 3.67495264 4.32504736 4.32504736-8 8" fill="none"
                                             stroke="#000" stroke-linecap="square"
                                             transform="matrix(0 1 -1 0 12.96 -3.141463)"></path>
@@ -41,10 +38,9 @@
                             <div class="content-active" role="tabpanel">
                                 <div class="content-box">
                                     <div class="pkodgenel">
-                                        <div class="floatlabel"><input type="text" value=""
-                                                class="ant-input"><label class="promosyon">Promosyon kodu</label>
-                                        </div><button type="button"
-                                            class="buton-uyg"><span>UYGULA</span></button>
+                                        <div class="floatlabel"><input type="text" value="" class="ant-input"><label
+                                                class="promosyon">Promosyon kodu</label>
+                                        </div><button type="button" class="buton-uyg"><span>UYGULA</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -61,8 +57,10 @@
                 </h2>
             </div>
         </div>
+        <HelperComponentsButton class="buy_btn" text="Satın Alma İşlemini Onaylayın"/>
         <div class="summaryftr">
-            <p>Müşteri hizmetleri<!-- --> :<a href="tel:0850 777 27 37"><u> <!-- -->0850 777 27 37</u></a><br><span>Ayrıca,
+            <p>Müşteri hizmetleri<!-- --> :<a href="tel:0850 777 27 37"><u> <!-- -->0850 777 27
+                        37</u></a><br><span>Ayrıca,
                     iletişim formunu doldurarak da bizimle iletişime geçebilirsiniz. Çalışma saatlerimiz her gün 09:00 -
                     19:00. Resmi tatiller hariç.</span></p>
         </div>
@@ -70,10 +68,14 @@
 </template>
 
 <style>
-.summary u{
+.buy_btn{
+    font-size: 1rem;
+}
+.summary u {
     text-decoration: underline;
 }
-.summaryftr a{
+
+.summaryftr a {
     color: inherit;
     text-decoration: none;
     touch-action: manipulation;
@@ -82,7 +84,8 @@
     cursor: pointer;
     transition: color .3s;
 }
-.summaryftr p{
+
+.summaryftr p {
     margin-top: 0;
     margin-bottom: 1em;
     display: block;
@@ -91,39 +94,47 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-.summaryftr{
-    font-size: var(--description-size);
+
+.summaryftr {
+    font-size: .75em;
     margin-top: 32px;
     text-align: center;
 }
-.toplam{
+
+.toplam {
     display: flex;
     justify-content: space-between;
     padding-top: 1em;
     padding-bottom: 1em;
     margin-bottom: 0;
-    border-top: 1px solid var(--color-disabled-primary);
-    font-size: var(--regular-size);
-    font-family: var(--font-primary);
+    border-top: 1px solid #919191;
+    font-size: 1em;
+    font-family: ModerneLLWeb-Medium, sans-serif;
 }
-.toplam-fiyat:nth-last-child(2){
+
+.toplam-fiyat:nth-last-child(2) {
     margin-bottom: 16px;
 }
-.toplam-fiyat{
+
+.toplam-fiyat {
     display: flex;
     justify-content: space-between;
     margin-bottom: 14px;
     font-size: var(--title-size);
     margin-top: 0;
 }
-.toplamlar{
+
+.toplamlar {
     padding-top: 14px;
     border-top: 1px solid var(--color-disabled-primary);
 }
-.divider{
+
+.divider {
     margin-top: 1em;
+    border-bottom: 1.2px solid gray;
 }
-.spin-container::after{
+
+.spin-container::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -139,10 +150,12 @@
     pointer-events: none;
     box-sizing: border-box;
 }
-.buton-uyg>span{
+
+.buton-uyg>span {
     display: inline-block;
 }
-.buton-uyg{
+
+.buton-uyg {
     height: auto;
     outline: 0;
     line-height: 1.5715;
@@ -153,7 +166,7 @@
     text-align: center;
     box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
     cursor: pointer;
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     user-select: none;
     touch-action: manipulation;
     padding: 2.4px 15px;
@@ -173,7 +186,8 @@
 
 
 }
-.promosyon{
+
+.promosyon {
     font-size: var(--title-size);
     font-weight: 400;
     position: absolute;
@@ -185,46 +199,55 @@
     touch-action: manipulation;
     cursor: default;
 }
-.ant-input{
+
+.ant-input {
     width: calc(100% - 5px);
     padding: 20px 12px 12px 11px;
     font-size: var(--title-size);
     touch-action: manipulation;
 }
-.floatlabel{
+
+.floatlabel {
     position: relative;
 }
-.pkodgenel>div{
+
+.pkodgenel>div {
     flex: auto;
-    
+
 }
-.pkodgenel{
+
+.pkodgenel {
     display: flex;
 
 }
-.content-box{
+
+.content-box {
     padding-top: 4px;
     padding: 0;
 
 }
-.content-active{
+
+.content-active {
     background-color: var(--color-white);
     border-top: 0;
     border-radius: 0 0 0 0;
 
 }
-.collapse-header::after{
+
+.collapse-header::after {
     display: table;
     clear: both;
     content: "";
 }
-.collapse-arrow svg{
+
+.collapse-arrow svg {
     transition: transform .24s;
     transform: rotate(180deg);
     height: 9;
     width: 18;
 }
-.collapse-arrow{
+
+.collapse-arrow {
     padding-top: 5px;
     position: absolute;
     top: 50%;
@@ -240,25 +263,28 @@
     cursor: pointer;
 
 }
-.collapse-header{
-    position :relative;
+
+.collapse-header {
+    position: relative;
     border-radius: 0;
     padding: 18px 0 8px;
     color: #000;
     line-height: 1.5715;
     cursor: pointer;
-    transition: all .3s,visibility 0s;
+    transition: all .3s, visibility 0s;
     background-color: var(--color-white);
     margin-bottom: 0.2em;
     font-size: var(--description-size);
 }
-.item-active{
+
+.item-active {
     border-radius: 0;
     border-bottom: none;
 }
-.icon-position-right{
+
+.icon-position-right {
     background-color: #fafafa;
-    border: 0;   
+    border: 0;
     line-height: 1.5715;
     list-style: none;
     box-sizing: border-box;
@@ -267,34 +293,41 @@
     color: #000;
     font-size: 16px;
 }
-.spin-container{
+
+.spin-container {
     position: relative;
     transition: opacity .3s;
 }
-.nested-loading{
+
+.nested-loading {
     position: relative;
 }
-.select-selector::after{
+
+.select-selector::after {
     display: inline-block;
     width: 0;
     visibility: hidden;
     content: "\a0";
 
 }
-.shipmentprice>svg{
+
+.shipmentprice>svg {
     margin-left: 10px;
 
 }
-svg:not(:root){
+
+svg:not(:root) {
     overflow: hidden;
 }
-.description{
+
+.description {
     color: var(--color-disabled-primary);
     text-transform: uppercase;
     font-size: 11px;
 
 }
-.select-label{
+
+.select-label {
     margin-bottom: 0;
     text-align: start;
     margin-right: 8px;
@@ -306,14 +339,17 @@ svg:not(:root){
     margin-top: 0;
 
 }
-.shipmentWrapper{
+
+.shipmentWrapper {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 9px 15px;
+    align-items: center;
 
 }
-.selection-item{
+
+.selection-item {
     position: relative;
     user-select: none;
     padding: 0;
@@ -327,7 +363,8 @@ svg:not(:root){
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.search-input{
+
+.search-input {
     margin: 0;
     padding: 0;
     background: transparent;
@@ -341,26 +378,29 @@ svg:not(:root){
     overflow: visible;
 
 }
-.selection-search{
+
+.selection-search {
     position: absolute;
     top: 0;
     right: 11px;
     bottom: 0;
     left: 11px;
 }
-.select-selector{
+
+.select-selector {
     padding: 0;
     height: auto;
     position: relative;
     background-color: #fff;
     border: 1px solid #d9d9d9;
     border-radius: 0;
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     width: 100%;
     display: flex;
 
 }
-.secim{
+
+.secim {
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -376,37 +416,19 @@ svg:not(:root){
 
 
 @media screen and (min-width: 1440px) {
-    .siparis-yazı{
+    .siparis-yazı {
         display: none;
         font-size: 21px;
         margin-bottom: 24px;
     }
-    }
-.sepet-bilgi{
+}
+
+.sepet-bilgi {
     padding: 16px 0;
 }
-.satınalma{
+
+.satınalma {
     position: sticky;
     top: 40px;
-}
-</style>
-
-<style scoped>
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-h2{
-    margin-top: 0;
-    color: #000;
-    font-weight: 500;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 </style>

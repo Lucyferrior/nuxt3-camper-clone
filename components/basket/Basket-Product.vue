@@ -15,7 +15,8 @@
                 <div class="bilgi">
                     <div>
                         <span class="size">Size</span>
-                        <button type="button" class="beden"><span>40</span>
+                        <button type="button" class="beden">
+                            <span>40</span>
                             <svg height="6" viewBox="0 0 18 9" width="11">
                                 <path d="m4-4 3.67495264 3.67495264 4.32504736 4.32504736-8 8" fill="none" stroke="#000"
                                     stroke-linecap="square" transform="matrix(0 1 -1 0 12.96 -3.141463)"></path>
@@ -42,7 +43,21 @@
     </div>
 </template>
 <style>
-
+.beden::before{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    z-index: 1;
+    display: none;
+    background: #fff;
+    border-radius: inherit;
+    opacity: .35;
+    transition: opacity .2s;
+    content: "";
+    pointer-events: none;
+}
 .shopping_bag_row_item {
     row-gap: 0px;
     border-bottom: 1px solid #d9d9d9;
