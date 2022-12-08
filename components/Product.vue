@@ -15,7 +15,8 @@
                                 class="style-image_hover" loading="eager">
                         </picture>
                     </div>
-                    <div class="sizes">
+                    
+                    <div class="sizes" v-if="sizes">
                         <span class="size_number size_number_available">39</span>
                         <span class="size_number size_number_available">40</span>
                         <span class="size_number size_number_available">41</span>
@@ -29,7 +30,7 @@
                 <div class="grid-content">
                     <p class="name">{{ product.title }}</p>
                     <p class="price">₺{{product.price}}</p>
-                    <p class="item-info">4 RENK</p>
+                    <p class="item-info" v-if="sizes">4 RENK</p>
                 </div>
             </router-link>
         </a>
@@ -134,6 +135,7 @@ export default {
         }
     },
     props: {
+        sizes: true,
         product: {
             type: Object,
             id: Number,

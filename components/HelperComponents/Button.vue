@@ -8,6 +8,7 @@
 </template>
 <style>
 .button {
+    cursor: pointer;
     min-width: 140px;
     font-family: ModerneLight;
     margin: 15px 4px 4px;
