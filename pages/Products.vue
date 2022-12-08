@@ -2,15 +2,15 @@
     <div>
         <div class="breadcrumb_wrapper">
             <span>
-            <span class="ant-breadcrumb-link"><a
-                        href="/tr_TR/">CAMPER</a>
-                    
-                    </span>
-                    </span>
-                        <span>
-                            <span class="ant-breadcrumb-link">Kadın
-                    Ayakkabı</span>
-                </span></div>
+                <span class="ant-breadcrumb-link">
+                    <NuxtLink to="/">Camper</NuxtLink>
+                </span>
+            </span>
+            <span>
+                <span class="ant-breadcrumb-link">
+                    Kadın Ayakkabı</span>
+            </span>
+        </div>
 
         <div id="product_container">
             <div class="product-list">
@@ -20,8 +20,7 @@
             <div id="plp-filter-nav" class="filter" style="top: 42px;">
                 <div class="filters-row" style="row-gap: 0px;">
                     <div>
-                        <button type="button"
-                            class="buton">
+                        <button type="button" class="buton">
                             <div><svg height="13" viewBox="0 0 16 13" width="16">
                                     <g fill="none" fill-rule="evenodd">
                                         <path d="m0 2.5h16" stroke="#000"></path>
@@ -32,7 +31,8 @@
                                         </g>
                                     </g>
                                 </svg> <span>Filtre </span></div>
-                        </button></div>
+                        </button>
+                    </div>
                     <div class="sorts_div"><span class="filter-text">97<!-- --> <!-- -->ÜRÜNLER<!-- -->
                         </span>
                         <span class="filter-text">
@@ -40,13 +40,14 @@
 
                             </span>-e göre
                             sirala<!-- --> :</span>
-                            <button type="button"
-                            class="header-btn"><span>
-                                CAMPER'IN SEÇİMİ </span><svg height="9" viewBox="0 0 18 9" width="18"
-                                class="chevron">
+                        <button type="button" class="header-btn">
+                            <span>
+                                CAMPER'IN SEÇİMİ </span>
+                            <svg height="9" viewBox="0 0 18 9" width="18" class="chevron">
                                 <path d="m4-4 3.67495264 3.67495264 4.32504736 4.32504736-8 8" fill="none" stroke="#000"
                                     stroke-linecap="square" transform="matrix(0 1 -1 0 12.96 -3.141463)"></path>
-                            </svg></button></div>
+                            </svg></button>
+                    </div>
                 </div>
             </div>
 
@@ -63,12 +64,14 @@
     overflow: hidden;
     flex-flow: row wrap;
 }
-.chevron{
+
+.chevron {
     width: 11px;
     margin-left: 5px;
     transition: transform .3s;
 }
-.header-btn{
+
+.header-btn {
     padding: 0 0 0 2px;
     margin-right: 0;
     margin-top: 1.5px;
@@ -87,41 +90,48 @@
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     user-select: none;
     touch-action: manipulation;
 
 }
-.sortdivider{
+
+.sortdivider {
     border-left: 1px solid #000;
     margin: 0 10px;
     display: inline;
     height: 16px;
 }
-.filter-text{
+
+.filter-text {
     text-transform: uppercase;
 }
-.filters-row>div:last-child{
+
+.filters-row>div:last-child {
     padding-bottom: 2px;
 }
+
 @media screen and (min-width: 1440px) {
     .filter-row span {
         font-size: 10px;
     }
 }
+
 svg:not(:root) {
     overflow: hidden;
 }
-.buton>div>svg{
+
+.buton>div>svg {
     margin-right: 9px;
     margin-top: -1px;
 }
-.buton>div{
+
+.buton>div {
     display: inline-flex;
     align-items: center;
 }
-.buton{
-    -webkit-appearance: button;
+
+.buton {
     padding-left: 2px;
     margin-top: 1.5px;
     font-size: 1em;
@@ -140,17 +150,18 @@ svg:not(:root) {
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     user-select: none;
     touch-action: manipulation;
     overflow: visible;
 }
-.filters-row>div:first-child{
+
+.filters-row>div:first-child {
     display: inline-flex;
     align-items: center;
 }
 
-.filters-row{
+.filters-row {
     row-gap: 0px;
     position: sticky;
     bottom: 0;
@@ -162,7 +173,8 @@ svg:not(:root) {
     display: flex;
     flex-flow: row wrap;
 }
-.filter{
+
+.filter {
     top: 42px;
     position: sticky;
     top: 0;
@@ -173,7 +185,8 @@ svg:not(:root) {
     max-width: 100%;
     min-height: 1px;
 }
-.desc{
+
+.desc {
     padding: 0 30px;
     text-align: center;
     margin: 16px auto 0;
@@ -182,11 +195,12 @@ svg:not(:root) {
     max-width: 460px;
 }
 
-.breadcrumb_wrapper>span:last-child{
+.breadcrumb_wrapper>span:last-child {
     color: black;
 }
-.breadcrumb_wrapper a{
-    color: rgba(0,0,0,.45);
+
+.breadcrumb_wrapper a {
+    color: rgba(0, 0, 0, .45);
     transition: color .3s;
     text-decoration: none;
     touch-action: manipulation;
@@ -194,7 +208,8 @@ svg:not(:root) {
     outline: none;
     cursor: pointer;
 }
-.product-list{
+
+.product-list {
     text-align: center;
     margin-bottom: 20px;
     display: block;
@@ -203,7 +218,8 @@ svg:not(:root) {
     position: relative;
     min-height: 1px;
 }
-.product-list>.yazi{
+
+.product-list>.yazi {
     text-transform: lowercase;
     padding: 0 30px;
     text-align: center;
@@ -211,12 +227,13 @@ svg:not(:root) {
     font-size: 1.5em;
     font-weight: 500;
 }
-.breadcrumb_wrapper>span{
+
+.breadcrumb_wrapper>span {
     background-color: #dfdfdf;
     margin: 5px 5px 5px 0;
     padding: 6px 16px;
 }
-.breadcrumb_wrapper{
+.breadcrumb_wrapper {
     font-size: .625em;
     padding: 5px 16px;
     text-transform: uppercase;
@@ -229,10 +246,12 @@ svg:not(:root) {
     box-sizing: border-box;
     margin: 0;
 }
-.product{
+
+.product {
     flex: 0 0 50%;
     max-width: 50%;
 }
+
 @media screen and (min-width: 768px) {
     .product {
         flex: 0 0 33.33333%;
@@ -246,8 +265,9 @@ svg:not(:root) {
         max-width: 25%;
     }
 }
+
 @media screen and (min-width: 1440px) {
-    .filters-row span{
+    .filters-row span {
         font-size: 10px;
     }
 }
@@ -258,6 +278,13 @@ export default {
     data() {
         return {
             products: [
+                {
+                    id: 1,
+                    title: "Twins",
+                    price: 2499,
+                    src_link_default: "https://cloud.camper.com/is/video/K100743-025_01VVM.webm",
+                    type:"video"
+                },
                 {
                     id: 1,
                     title: "Twins",

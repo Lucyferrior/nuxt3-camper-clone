@@ -1,21 +1,26 @@
 <template>
-    <div class="product"  @mouseover="show_default = false" @mouseleave="show_default = true">
+    <div class="product" @mouseover="show_default = false" @mouseleave="show_default = true">
         <a>
             <router-link to="product-details">
                 <div class="gridPhoto">
-                    <div class="grid-images">
+                    <div class="grid-images" v-if="(product.type != 'video')">
                         <picture class="style-image">
-                            <img v-bind:src="product.src_link_default"
-                                class="style-image" width="326" height="489">
+                            <img v-bind:src="product.src_link_default" class="style-image" width="326" height="489">
                         </picture>
 
 
                         <picture class="style-image_hover" v-if="!show_default" @mouseleave="show_default = true">
-                            <img v-bind:src="product.src_link_second"
-                                class="style-image_hover" loading="eager">
+                            <img v-bind:src="product.src_link_second" class="style-image_hover" loading="eager">
                         </picture>
                     </div>
-                    
+                    <div class="grid-images" v-else>
+                        <div class="vsc-controller"></div>
+                        <video class="style_gridVideo__1G7y7 style-image" autoplay="" loop="" 
+                            title="Video of K100743-025" muted="" playsinline="">
+                            <source :src="product.src_link_default" type="video/webm">
+                        </video>
+                    </div>
+
                     <div class="sizes" v-if="sizes">
                         <span class="size_number size_number_available">39</span>
                         <span class="size_number size_number_available">40</span>
@@ -29,7 +34,7 @@
                 </div>
                 <div class="grid-content">
                     <p class="name">{{ product.title }}</p>
-                    <p class="price">₺{{product.price}}</p>
+                    <p class="price">₺{{ product.price }}</p>
                     <p class="item-info" v-if="sizes">4 RENK</p>
                 </div>
             </router-link>
@@ -42,6 +47,9 @@
     position: relative;
 }
 
+video{
+    position: absolute;
+}
 .sizes {
     align-self: end;
     display: grid;
@@ -142,7 +150,8 @@ export default {
             title: String,
             price: String,
             src_link_default: String,
-            src_link_second: String
+            src_link_second: String,
+            type: String
         }
     }
 }

@@ -92,6 +92,7 @@
 <style>
 .alt_kategoriler:hover .highlights{
     display: flex;
+    height: 500px;
 }
 .icon-link:hover {
     background-color: black;
