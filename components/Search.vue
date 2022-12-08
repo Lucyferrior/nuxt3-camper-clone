@@ -29,68 +29,76 @@
             <div class="fotolar">
                 <div class="foto-genel">
                     <div class="foto-y">
-                        <div class="jYnWnh"><a class="trackable "
-                            href="https://www.camper.com/tr_TR/landings/new_arrivals">
+                        <div class="jYnWnh">
+                            <NuxtLink to="Products">
                             <picture>
                                 <img
                                 src="https://www.camper.com/cms/api/assets/tiers-banners-homes/0065906a-fd00-43ec-abd1-01ac3e985fe2/T95-W37-SEARCH-BANNER-NEW-COLLECTION_mobile.jpg"
                                 alt="Yeni Koleksiyon" class="foto-yazı">
                             </picture>
-                        </a></div>
+                        </NuxtLink>
+                    </div>
                         <div class="content-search">
                             <h1 class="yazı-yeni  ">Yeni Koleksiyon</h1>
-                            <div class="fLTzSD"><a href="https://www.camper.com/tr_TR/landings/new_arrivals"
-                                class="alışveriş-btn ">Alışverişe Başla</a>
+                            <div class="fLTzSD"><NuxtLink to="Products" class="alışveriş-btn ">
+                                Alışverişe Başla</NuxtLink>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="foto-genel">
                     <div class="foto-y">
-                        <div class="jYnWnh"><a class="trackable "
-                                href="https://www.camper.com/tr_TR/women/shoes/new_arrivals_women">
+                        <div class="jYnWnh">
+
+                            <NuxtLink to="Products" class="jYnWnh">
                                 <picture>
                                     <img
                                         src="https://www.camper.com/cms/api/assets/tiers-banners-homes/fb9743c5-48f1-477a-82fe-310500d80f2d/T95-W37-SEARCH-BANNER-W_mobile.jpg"
                                         alt="Kadın" class="foto-yazı">
                                     </picture>
-                                </a></div>
+                                </NuxtLink>
+                            </div>
                         <div class="foto-ortası">
-                            <div class="fLTzSD"><a
-                                    href="https://www.camper.com/tr_TR/women/shoes/new_arrivals_women"
-                                    class="yazi-btn">Kadın</a></div>
+                            <div class="fLTzSD">
+                                <NuxtLink to="Products" class="yazi-btn">
+                                Kadın</NuxtLink>
+                                </div>
                         </div>
                     </div>
                 </div>
                 <div class="foto-genel">
                     <div class="foto-y">
-                        <div class="jYnWnh"><a class="trackable "
-                                href="https://www.camper.com/tr_TR/men/shoes/new_arrivals_men">
+                        <div class="jYnWnh">
+                            <NuxtLink to="Products" class="jYnWnh">
                                 <picture>
                                     <img
                                         src="https://www.camper.com/cms/api/assets/tiers-banners-homes/c88b0fba-5520-4766-9a3f-3e590c733cda/T95-W37-SEARCH-BANNER-M_mobile.jpg"
                                         alt="Erkek" class="foto-yazı">
                                 </picture>
-                            </a></div>
+                            </NuxtLink></div>
                             <div class="foto-ortası">
-                            <div class="fLTzSD"><a href="https://www.camper.com/tr_TR/men/shoes/new_arrivals_men"
-                                    class="yazi-btn">Erkek</a></div>
+                            <div class="fLTzSD">
+                                <NuxtLink to="Products" class="yazi-btn">
+                               Erkek</NuxtLink>
+                                </div>
                                 </div>
                     </div>
                 </div>
                 <div class="foto-genel">
                     <div class="foto-y">
-                        <div class="jYnWnh"><a class="trackable "
-                            href="https://www.camper.com/tr_TR/kids/shoes/new_arrivals_kids">
+                        <div class="jYnWnh">
+                            <NuxtLink to="Products" class="jYnWnh">
                             <picture>
                                     <img
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/784f6935-0d4e-4832-b977-989a118d409e/T95-W37-SEARCH-BANNER-K_mobile.jpg"
                                     alt="Çocuk" class="foto-yazı">
                                 </picture>
-                            </a></div>
+                            </NuxtLink></div>
                             <div class="foto-ortası">
-                                <div class="fLTzSD"><a href="https://www.camper.com/tr_TR/kids/shoes/new_arrivals_kids"
-                                    class="yazi-btn">Çocuk</a></div>
+                                <div class="fLTzSD">
+                                    <NuxtLink to="Products" class="yazi-btn">
+                                    Çocuk</NuxtLink>
+                                </div>
                                 </div>
                             </div>
                 </div>

@@ -22,10 +22,10 @@
                             <div>
                                 <p class="müşteri-hizmetleri">Müşteri Hizmetleri</p>
                                 <p class="sağ-yazı">Ayrıca, iletişim formunu doldurarak da bizimle iletişime geçebilirsiniz.
-                                    Çalışma saatlerimiz her gün 09:00 - 19:00. Resmi tatiller hariç.</p><a
-                                    class="tel-no"
-                                    href="tel:0850 777 27 37">Bizi arayın:
-                                    0850 777 27 37</a>
+                                    Çalışma saatlerimiz her gün 09:00 - 19:00. Resmi tatiller hariç.</p>
+                                    <NuxtLink to="/" class="tel-no">
+                                    Bizi arayın:
+                                    0850 777 27 37</NuxtLink>
                             </div>
                         </div>
                         <div class="sağ-alt yazı">
@@ -34,8 +34,9 @@
                                 </div>
                             <div>
                                 <p class="cmpr-mgz">Camper mağazalari</p>
-                                <p class="yakın-mgz"></p><a href="https://www.camper.com/tr_TR/shops"
-                                    class="mgz">Size en yakin mağazayi bulun</a>
+                                <p class="yakın-mgz"></p>
+                                <NuxtLink to="/" class="mgz">
+                               Size en yakin mağazayi bulun</NuxtLink>
                             </div>
                         </div>
                     </div></div>
@@ -49,22 +50,37 @@
                                 </div>
                                 <ul class="ortasol-genel">
                                     <li class="liste-yazı">
-                                        <a cursor="pointer" class="wgBem">Sipariş takibi</a>
+                                        <NuxtLink to="/" cursor="pointer" class="wgBem">Sipariş takibi</NuxtLink>
                                     </li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/at_cliente_faq?faq=21"
-                                            class="liste-yazı2">Ödeme</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/at_cliente_faq?question=46"
-                                            class="liste-yazı2">Gönderim</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/at_cliente_faq?tit=5"
-                                            class="liste-yazı2">Iade ve değişimler</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/at_cliente_faq?faq=51"
-                                            class="liste-yazı2">Ürün garantisi</a></li>
-                                    <li class="liste-yazı"><a href="https://www.camper.com/tr_TR/sitemap"
-                                            class="liste-yazı2">Sitemap</a></li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                            
+                                            class="liste-yazı2">Ödeme
+                                        </NuxtLink>
+                                        </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                           
+                                            class="liste-yazı2">Gönderim
+                                    </NuxtLink>
+                                    </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                            
+                                            class="liste-yazı2">Iade ve değişimler
+                                        </NuxtLink>
+                                    </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                          
+                                            class="liste-yazı2">Ürün garantisi
+                                        </NuxtLink>
+                                    </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to= "/" 
+                                            class="liste-yazı2">Sitemap
+                                        </NuxtLink
+                                            ></li>
                                 </ul>
                             </div>
                             <div class="divler">
@@ -72,17 +88,27 @@
                                     <p class="p-class">Müşteri hizmetleri</p>
                                 </div>
                                 <ul class="erAkNO">
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/customer_service"
-                                            class="liste-yazı2">Sss</a></li>
-                                    <li class="liste-yazı"><a href="https://www.camper.com/tr_TR/contacto"
-                                            class="liste-yazı2">Iletişim</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/html/legal/pdfs/privacy/privacy_VF_EN.pdf" target="_blank"
-                                            class="liste-yazı2">Gizlilik ilkeleri</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/html/legal/TC/TC_TR00_TR_TR.htm" target="_blank"
-                                            class="liste-yazı2">Kullanim koşullari</a></li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                          
+                                            class="liste-yazı2">Sss</NuxtLink></li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                        
+                                            class="liste-yazı2">Iletişim
+                                        </NuxtLink>
+                                        </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                           
+                                            class="liste-yazı2">Gizlilik ilkeleri
+                                        </NuxtLink>
+                                    </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                           target="_blank"
+                                            class="liste-yazı2">Kullanim koşullari
+                                        </NuxtLink></li>
                                 </ul>
                             </div>
                             <div class="divler">
@@ -90,17 +116,24 @@
                                     <p class="p-class">Camper hakkinda</p>
                                 </div>
                                 <ul class="erAkNO">
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/content/history"
-                                            class="liste-yazı2">Tarihçe</a></li>
-                                    <li class="liste-yazı"><a href="https://www.camper.com/tr_TR/together"
-                                            class="liste-yazı2">Camper together</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/content/social_responsibility"
-                                            class="liste-yazı2">Social Responsibility</a></li>
-                                    <li class="liste-yazı"><a
-                                            href="https://www.camper.com/tr_TR/contacto?type=8"
-                                            class="liste-yazı2">Iş imkanlari</a></li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                           
+                                            class="liste-yazı2">Tarihçe</NuxtLink>
+                                        </li>
+                                    <li class="liste-yazı">
+                                        <NuxtLink to="/"
+                                        
+                                            class="liste-yazı2">Camper together 
+                                        </NuxtLink>
+                                    </li>
+                                    <li class="liste-yazı"><NuxtLink to="/"
+                                           
+                                            class="liste-yazı2">Social Responsibility</NuxtLink>
+                                        </li>
+                                    <li class="liste-yazı"><NuxtLink to="/"
+                                            
+                                            class="liste-yazı2">Iş imkanlari</NuxtLink></li>
                                 </ul>
                             </div>
                         </div>
@@ -110,9 +143,9 @@
         </div>
         <div class="alt-div">
             <div class="column ">
-                <div class="fHCHyC-crlswz b-corp"><a href="https://www.camper.com/int/content/bcorp"><img
+                <div class="fHCHyC-crlswz b-corp"><NuxtLink to="/"><img
                             src="https://www.camper.com/cms/api/assets/tiers-banners-homes/07972d9c-e695-4986-b660-74be9ced5854/bcorp-v2.svg"
-                            alt="b-corp"></a></div>
+                            alt="b-corp"></NuxtLink></div>
             </div>
         </div>
         <div class="alt-div" style="border:0">
@@ -136,40 +169,40 @@
                 class="column3">
                 <div class="hQrVZb">
                     <div class="iconlar">
-                        <div class="icon"><a href="https://www.facebook.com/Camper" target="_blank"
+                        <div class="icon"><NuxtLink to="/" target="_blank"
                                 rel="noopener noreferrer"><img alt="facebook"
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/87497d33-586d-4a79-9fa5-c47354ab68ca/facebook.svg"
-                                    width="24px" height="24px"></a></div>
+                                    width="24px" height="24px"></NuxtLink></div>
                     </div>
                     <div class="iconlar">
-                        <div class="icon"><a href="https://www.tiktok.com/@camper?lang=en " target="_blank"
+                        <div class="icon"><NuxtLink to="/" target="_blank"
                                 rel="noopener noreferrer"><img alt="tiktok"
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/3fb534a7-733c-48c0-b970-803bb4530013/tiktok.svg"
-                                    width="24px" height="24px"></a></div>
+                                    width="24px" height="24px"></NuxtLink></div>
                     </div>
                     <div class="iconlar">
-                        <div class="icon"><a href="https://www.linkedin.com/company/camper" target="_blank"
+                        <div class="icon"><NuxtLink to="/" target="_blank"
                                 rel="noopener noreferrer"><img alt="linkedin"
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/dbf580d8-c41b-4fd9-974e-b95f2631a7df/linkedin.svg"
-                                    width="24px" height="24px"></a></div>
+                                    width="24px" height="24px"></NuxtLink></div>
                     </div>
                     <div class="iconlar">
-                        <div class="icon"><a href="https://instagram.com/camper/" target="_blank"
+                        <div class="icon"><NuxtLink to="/" target="_blank"
                                 rel="noopener noreferrer"><img alt="instagram"
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/8009cc8f-2e97-4ba1-b4a8-a830b62b0481/instagram.svg"
-                                    width="24px" height="24px"></a></div>
+                                    width="24px" height="24px"></NuxtLink></div>
                     </div>
                     <div class="iconlar">
-                        <div class="icon"><a href="https://www.pinterest.com/campershoes/" target="_blank"
+                        <div class="icon"><NuxtLink to="/" target="_blank"
                                 rel="noopener noreferrer"><img alt="pinterest"
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/36db0a8a-3344-4de0-a6d1-046e8280f518/pinterest.svg"
-                                    width="24px" height="24px"></a></div>
+                                    width="24px" height="24px"></NuxtLink></div>
                     </div>
                     <div class="iconlar">
-                        <div class="icon"><a href="https://www.youtube.com/user/Camper" target="_blank"
+                        <div class="icon"><NuxtLink to="/" target="_blank"
                                 rel="noopener noreferrer"><img alt="youtube"
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/3f6f04fe-212f-4377-86ad-c8b6a27576f7/youtube.svg"
-                                    width="24px" height="24px"></a></div>
+                                    width="24px" height="24px"></NuxtLink></div>
                     </div>
                 </div>
             </div>
