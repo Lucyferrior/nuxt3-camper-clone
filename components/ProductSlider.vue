@@ -14,7 +14,7 @@
         </button>
     </div>
 </template>
-<style>
+<style scoped>
 .product {
     display: flex;
     flex: 0 0 40%;
