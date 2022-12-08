@@ -75,7 +75,7 @@
 
                             <div class="sc-cGKJhA fTwFWY">
                                 <div class="sepet-icon">
-                                    <NuxtLink to="basket">
+                                    <NuxtLink to="basket" class="icon-link">
                                         <span class="sepet-sayı">2</span>
                                     </NuxtLink>
                                    
