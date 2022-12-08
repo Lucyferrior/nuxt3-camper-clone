@@ -44,21 +44,18 @@
                 </h4>
             </div>
             <div id="size_list_wrapper">
-                <ul id="size_list_items" v-if="false">
+                <ul id="size_list_items">
                     <li class="size_list_item"><span
                             class="size_list_span size_number_available ant-tooltip-open">40</span></li>
                     <li class="size_list_item"><span class="size_list_span size_number_not_available">41</span></li>
                     <li class="size_list_item"><span class="size_list_span size_number_limited">42</span></li>
-                </ul>
-                <ul id="size_list_items">
-                    <li class="size_list_item"> <HelperComponentsButton classes="reverse"/></li>
                 </ul>
             </div>
             <p id="limited_sized_label">*Az adetli</p>
         </div>
         <div class="sticky-col">
             <div id="add_to_card">
-                <HelperComponentsButton text="sepete ekle" classes="my_btn" />
+                <HelperComponentsButton  text="sepete ekle" classes="my_btn" />
                 <p id="card_extra_info_labal">3,6 veya 8 taksit ile ödeme imkanı</p>
             </div>
             <div class="add_wish_list_wrapper">
