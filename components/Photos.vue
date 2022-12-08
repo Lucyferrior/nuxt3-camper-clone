@@ -20,7 +20,7 @@
                     <h3 class="yazı-h3">{{ pht.subtitle }}</h3>
                     <div class="sc-amiJK fLTzSD">
                         <span v-for="item in pht.btns" v-bind:key="item.id">
-                            <Btn :classes="item.type" :text="item.text" />
+                            <HelperComponentsButton :classes="item.type" :text="item.text" />
                         </span>
                     </div>
                 </div>
