@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NuxtLink to="Products">ürünler sayfasına git</NuxtLink>
+        
         <Photos :pht="pht1"/>
         <div class="triple_base">
             <Photos class="triple" :pht="pht2"/>
