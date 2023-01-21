@@ -73,36 +73,35 @@
 }
 </style>
 
-<script>
-export default {
-    data() {
-        return {
-            _left_value: 0,
+<script setup lang="ts">
+var _left_value: any = ref(0)
+const props = defineProps({
+    sizes: Boolean,
+        items: {
+            type: Object,
+            id: Number,
+            title: String,
+            price: String,
+            src_link_default: String,
+            src_link_second: String,
         }
-    },
-    methods: {
-        hareket_hesapla() {
-            var kaydir = document.querySelector(".product").offsetWidth
+})
+function hareket_hesapla() {
+            var kaydir = document.querySelector(".product")?.offsetWidth
             return kaydir;
-        },
-        sola_cek(event) {
-            this._left_value -= this.hareket_hesapla();
-        },
-        saga_cek(event) {
-            var kaydir = this.hareket_hesapla();
-            if(this._left_value < 0){
-                this._left_value += this.hareket_hesapla();
-            }else{
-                this._left_value = 0
-            }
-        },
-        getLeft() {
-            return "left:" + this._left_value + "px;";
         }
-    },
-    props: {
-        sizes: true,
-        items:[]
-    }
-}
+    function sola_cek() {
+            _left_value -= hareket_hesapla();
+        }
+        function saga_cek() {
+            var kaydir = hareket_hesapla();
+            if( _left_value < 0){
+                _left_value += hareket_hesapla();
+            }else{
+                _left_value = 0
+            }
+        }
+        function getLeft() {
+            return "left:" + _left_value + "px;";
+        }
 </script>

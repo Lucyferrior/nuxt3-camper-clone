@@ -19,21 +19,12 @@
             </div>
             <div class="loading">
                 <div class="container">
-                    <BasketProduct title="Runner K21"
-                        subtitle="27205-247"
-                        price="2049"
-                        size="39"
-                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg"/>
-                        <BasketProduct title="Runner K21"
-                        subtitle="27205-247"
-                        price="2049"
-                        size="39"
-                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg"/>
-                        <BasketProduct title="Runner K21"
-                        subtitle="27205-247"
-                        price="2049"
-                        size="39"
-                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg"/>
+                    <BasketProduct title="Runner K21" subtitle="27205-247" price="2049" size="39"
+                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg" />
+                    <BasketProduct title="Runner K21" subtitle="27205-247" price="2049" size="39"
+                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg" />
+                    <BasketProduct title="Runner K21" subtitle="27205-247" price="2049" size="39"
+                        src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg" />
                 </div>
             </div>
             <div class="related">
@@ -53,21 +44,24 @@
                 </div>
             </div>
         </div>
-        <BasketSepetOnay/>
+        <BasketSepetOnay />
     </div>
 </template>
 
 <style>
-.related_nav_item_active{
+.related_nav_item_active {
     text-decoration: underline;
 }
-.related_nav_item{
+
+.related_nav_item {
     list-style: none;
     margin: 6px;
 }
-.product{
+
+.product {
     flex: 0 0 10%;
 }
+
 .related_nav {
     display: flex;
     flex-wrap: wrap;
@@ -75,15 +69,19 @@
     margin-top: 18px;
     margin-bottom: 1em;
 }
-.related{
+
+.related {
     margin: 40px auto 0;
 }
-.related_header{
+
+.related_header {
     text-align: center;
 }
-.related_title{
+
+.related_title {
     font-size: 1.5em;
 }
+
 .shopping_bag_wrapper {
     margin: 28px auto 0;
     max-width: 75%;
@@ -151,14 +149,17 @@
     align-items: center;
     display: flex;
 }
+
 @media screen and (min-width: 1280px) {
     .related {
         margin: 80px auto 0;
     }
-    .related_nav_item{
+
+    .related_nav_item {
         font-size: .75em;
     }
-    .shopping_bag_wrapper{
+
+    .shopping_bag_wrapper {
         grid-gap: 90px;
     }
 }
@@ -168,43 +169,37 @@ p {
     margin-bottom: 1em;
 }
 </style>
-<script>
-export default {
-    data() {
-        return {
-            products: [
-                {
-                    id: 1,
-                    title: "Twins",
-                    price: 2499,
-                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-                },
-                {
-                    id: 2,
-                    title: "Runner K21",
-                    price: 2499,
-                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-                },
-                {
-                    id: 3,
-                    title: "Runner",
-                    price: 2499,
-                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-                },
-                {
-                    id: 3,
-                    title: "Runner",
-                    price: 2499,
-                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-                },
-                {
-                    id: 3,
-                    title: "Runner",
-                    price: 2499,
-                    src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-                },
-            ]
-        };
-    }
-}
+<script setup lang="ts">
+const products = ref([
+    {
+        id: 1,
+        title: "Twins",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 2,
+        title: "Runner K21",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 3,
+        title: "Runner",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 3,
+        title: "Runner",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 3,
+        title: "Runner",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+])
 </script>

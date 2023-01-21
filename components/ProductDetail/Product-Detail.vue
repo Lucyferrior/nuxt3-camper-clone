@@ -125,11 +125,8 @@
     }
 }
 </style>
-<script>
-export default {
-    data() {
-        return {
-            products: [
+<script setup lang="ts">
+const products = ref([
                 {
                     id: 1,
                     title: "Twins",
@@ -165,7 +162,5 @@ export default {
                     src_link_default: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_LF.jpg",
                     src_link_second: "https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100226-052_CF.jpg"
                 },
-            ]
-        };
-    },
-}</script>
+            ])
+</script>
