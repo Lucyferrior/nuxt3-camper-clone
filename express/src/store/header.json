@@ -1,0 +1,379 @@
+{
+    "KadinilkSutun": {
+    "First": [
+        {
+            "title": "S/K 2022 Koleksiyonu",
+            "link": "products"
+        },
+        {
+            "title": "S/K 2022 Kampanyası",
+            "link": "products"
+        },
+        {
+            "title": "Teknoloji",
+            "link": "products"
+        },
+        {
+            "title": "Sürdürülebilirlik",
+            "link": "products"
+        },
+        {
+            "title": "Gift Guide",
+            "link": "products"
+        }
+    ],
+    "Second": [
+        
+    ]
+},
+"KadinikinciSutun":{
+    "First":[
+        {
+            "title": "AYAKKABI",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Kadın Ayakkabıları",
+            "link": "products"
+        },
+        {
+            "title": "Sandaletler",
+            "link": "products"
+        },
+        {
+            "title": "Spor Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Düz Tabanlar",
+            "link": "products"
+        },
+        {
+            "title": "Günlük Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Klasik Ayakkabılar",
+            "link": "products"
+        }
+    ],
+    "Second":[
+        {
+            "title": "İkonik Modeller:",
+            "link": "products"
+        },
+        {
+            "title": "Pelotas",
+            "link": "products"
+        },
+        {
+            "title": "Peu",
+            "link": "products"
+        },
+        {
+            "title": "Twins",
+            "link": "products"
+        },
+        {
+            "title": "Wabi",
+            "link": "products"
+        }
+    ]
+},
+"KadinucuncuSutun":{
+    "First":[
+        {
+            "title": "AKSESUARLAR",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Aksesuarlar",
+            "link": "products"
+        },
+        {
+            "title": "Küçük Aksesuarlar",
+            "link": "products"
+        },
+        {
+            "title": "Çantalar",
+            "link": "products"
+        },
+        {
+            "title": "Çoraplar",
+            "link": "products"
+        },
+        {
+            "title": "Ayakkabı Bakımı",
+            "link": "products"
+        }
+    ],
+    "Second":[
+    ]
+},
+"ErkekilkSutun": {
+    "First": [
+        {
+            "title": "S/K 2022 Koleksiyonu",
+            "link": "products"
+        },
+        {
+            "title": "S/K 2022 Kampanyası",
+            "link": "products"
+        },
+        {
+            "title": "Teknoloji",
+            "link": "products"
+        },
+        {
+            "title": "Sürdürülebilirlik",
+            "link": "products"
+        },
+        {
+            "title": "Gift Guide",
+            "link": "products"
+        }
+    ],
+    "Second": [
+        
+    ]
+},
+"ErkekikinciSutun":{
+    "First":[
+        {
+            "title": "AYAKKABI",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Erkek Ayakkabıları",
+            "link": "products"
+        },
+        {
+            "title": "Spor Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Günlük Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Klasik Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Sandaletler",
+            "link": "products"
+        },
+        {
+            "title": "Yarım Botlar",
+            "link": "products"
+        }
+    ],
+    "Second":[
+        {
+            "title": "İkonik Modeller:",
+            "link": "products"
+        },
+        {
+            "title": "Pelotas",
+            "link": "products"
+        },
+        {
+            "title": "Peu",
+            "link": "products"
+        },
+        {
+            "title": "Twins",
+            "link": "products"
+        },
+        {
+            "title": "Wabi",
+            "link": "products"
+        }
+    ]
+},
+"ErkekucuncuSutun":{
+    "First":[
+        {
+            "title": "AKSESUARLAR",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Aksesuarlar",
+            "link": "products"
+        },
+        {
+            "title": "Küçük Aksesuarlar",
+            "link": "products"
+        },
+        {
+            "title": "Çantalar",
+            "link": "products"
+        },
+        {
+            "title": "Çoraplar",
+            "link": "products"
+        },
+        {
+            "title": "Ayakkabı Bakımı",
+            "link": "products"
+        }
+    ],
+    "Second":[
+    ]
+},
+"CocukilkSutun": {
+    "First": [
+        {
+            "title": "Tüm Çocuk Ayakkabıları",
+            "link": "products"
+        },
+        {
+            "title": "S/K 2022 Koleksiyonu",
+            "link": "products"
+        },
+        {
+            "title": "Camper Çocuk",
+            "link": "products"
+        },
+        {
+            "title": "Sürdürülebilirlik",
+            "link": "products"
+        },
+        {
+            "title": "Gift Guide",
+            "link": "products"
+        }
+    ],
+    "Second": [
+
+         {
+            "title": "İkonik Modeller:",
+            "link": "products"
+        },
+        {
+            "title": "Peu",
+            "link": "products"
+        },
+        {
+            "title": "TWins",
+            "link": "products"
+        }
+
+    ]
+},
+"CocukikinciSutun":{
+    "First":[
+        {
+            "title": "KIZ ÇOCUK",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Çocuk Ayakkabıları",
+            "link": "products"
+        },
+        {
+            "title": "Sandaletler",
+            "link": "products"
+        },
+        {
+            "title": "Spor Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Balerin Modeli",
+            "link": "products"
+        },
+        {
+            "title": "Cırt Cırtlı",
+            "link": "products"
+        },
+        {
+            "title": "Bağcıklı",
+            "link": "products"
+        }
+    ],
+    "Second":[
+        {
+            "title": "ERKEK ÇOCUK",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Çocuk Ayakkabıları",
+            "link": "products"
+        },
+
+        {
+            "title": "Sandaletler",
+            "link": "products"
+        },
+        {
+            "title": "Spor Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Cırt Cırtlı",
+            "link": "products"
+        },
+        {
+            "title": "Bağcıklı",
+            "link": "products"
+        }
+    ]
+},
+"CocukucuncuSutun":{
+    "First":[
+        {
+            "title": "İLK ADIM",
+            "link": "products"
+        },
+        {
+            "title": "Tüm Çocuk Ayakkabıları",
+            "link": "products"
+        },
+        {
+            "title": "Spor Ayakkabılar",
+            "link": "products"
+        },
+        {
+            "title": "Sandaletler",
+            "link": "products"
+        },
+        {
+            "title": "Cırt Cırtlı",
+            "link": "products"
+        }
+    ],
+    "Second":[
+    ]
+},
+"CamperlabilkSutun": {
+    "First": [
+        {
+            "title": "Kadın Koleksiyonu",
+            "link": "products"
+        },
+        {
+            "title": "Erkek Koleksiyonu",
+            "link": "products"
+        }
+    ],
+    "Second": [
+        
+    ]
+},
+"CamperlabikinciSutun":{
+    "First":[
+
+    ],
+    "Second":[
+       
+    ]
+},
+"CamperlabucuncuSutun":{
+    "First":[
+       
+    ],
+    "Second":[
+    ]
+}
+}
