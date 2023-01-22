@@ -33,13 +33,12 @@
                                 </svg> <span>Filtre </span></div>
                         </button>
                     </div>
-                    <div class="sorts_div"><span class="filter-text">97<!-- --> <!-- -->ÜRÜNLER<!-- -->
+                    <div class="sorts_div"><span class="filter-text">97 ÜRÜNLER 
                         </span>
                         <span class="filter-text">
                             <span class="sortdivider">
 
-                            </span>-e göre
-                            sirala<!-- --> :</span>
+                            </span>-e göre sirala :</span>
                         <button type="button" class="header-btn">
                             <span>
                                 CAMPER'IN SEÇİMİ </span>
@@ -280,7 +279,7 @@ const products = ref([
         title: "Twins",
         price: 2499,
         src_link_default: "https://cloud.camper.com/is/video/K100743-025_01VVM.webm",
-        type: 'video'
+        typ: "video"
     },
     {
         id: 1,
