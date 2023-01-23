@@ -3,11 +3,11 @@
         <div class="kZdCIz">
             <div class="bMmwdY">
                 <div class="fZqon"><NuxtLink class="trackable " to="products">
-                        <picture v-if="pht.type === 'img'">
+                        <picture v-if="pht.typ === 'img'">
                             <img :src="pht.srclink" alt="Teix" width="2000px" height="1125px" class="foto">
                         </picture>
-                        <video v-else autoplay="" loop="" class="backgroundvideo" title="13. Sayı - Ydra" muted=""
-                            playsinline=""
+                        <video v-else autoplay="true" loop="true" class="backgroundvideo" title="13. Sayı - Ydra" muted="true"
+                            playsinline="true"
                             poster="https://www.camper.com/cms/api/assets/tiers-banners-homes/811bfaac-8bda-4170-838c-ef3f3827447c/T95-TWS-13-YDRA_Desktop.avif">
                             <source
                                 type="video/webm"
@@ -28,24 +28,24 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-    props: {
-        pht: {
+<script setup lang="ts">
+const props = defineProps({
+    pht: {
+            required: true,
             title: String,
             srclink: String,
-            type: String,
+            type: Object,
+            typ:String,
             btns: [
                 {
+                    required: true,
                     text: String,
                     link: String,
-                    type: String
+                    type: Object
                 }
             ]
         }
-
-    }
-}
+})
 </script>
 <style>
 .backgroundvideo{

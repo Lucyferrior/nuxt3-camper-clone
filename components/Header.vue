@@ -316,11 +316,8 @@ input {
 }
 </style>
 
-<script>
-export default {
-    data() {
-        return {
-            KadinilkSutun: {
+<script setup lang="ts" >
+const KadinilkSutun= {
                 First: [
                     {
                         title: "S/K 2022 Koleksiyonu",
@@ -346,8 +343,8 @@ export default {
                 Second: [
                     
                 ]
-            },
-            KadinikinciSutun:{
+            }
+      const   KadinikinciSutun={
                 First:[
                     {
                         title: "AYAKKABI",
@@ -400,8 +397,8 @@ export default {
                         link: "products"
                     }
                 ]
-            },
-            KadinucuncuSutun:{
+            }
+       const KadinucuncuSutun={
                 First:[
                     {
                         title: "AKSESUARLAR",
@@ -430,8 +427,8 @@ export default {
                 ],
                 Second:[
                 ]
-            },
-            ErkekilkSutun: {
+            }
+        const ErkekilkSutun= {
                 First: [
                     {
                         title: "S/K 2022 Koleksiyonu",
@@ -457,8 +454,8 @@ export default {
                 Second: [
                     
                 ]
-            },
-            ErkekikinciSutun:{
+            }
+      const  ErkekikinciSutun={
                 First:[
                     {
                         title: "AYAKKABI",
@@ -511,8 +508,8 @@ export default {
                         link: "products"
                     }
                 ]
-            },
-            ErkekucuncuSutun:{
+            }
+            const ErkekucuncuSutun={
                 First:[
                     {
                         title: "AKSESUARLAR",
@@ -541,8 +538,8 @@ export default {
                 ],
                 Second:[
                 ]
-            },
-            CocukilkSutun: {
+            }
+              const  CocukilkSutun={
                 First: [
                     {
                         title: "Tüm Çocuk Ayakkabıları",
@@ -581,8 +578,8 @@ export default {
                     },
 
                 ]
-            },
-            CocukikinciSutun:{
+            }
+        const CocukikinciSutun={
                 First:[
                     {
                         title: "KIZ ÇOCUK",
@@ -640,8 +637,8 @@ export default {
                         link: "products"
                     },
                 ]
-            },
-            CocukucuncuSutun:{
+            }
+         const CocukucuncuSutun={
                 First:[
                     {
                         title: "İLK ADIM",
@@ -666,8 +663,8 @@ export default {
                 ],
                 Second:[
                 ]
-            },
-            CamperlabilkSutun: {
+            }
+         const CamperlabilkSutun= {
                 First: [
                     {
                         title: "Kadın Koleksiyonu",
@@ -681,27 +678,24 @@ export default {
                 Second: [
                     
                 ]
-            },
-            CamperlabikinciSutun:{
+            }
+         const   CamperlabikinciSutun={
                 First:[
 
                 ],
                 Second:[
                    
                 ]
-            },
-            CamperlabucuncuSutun:{
+            }
+           const CamperlabucuncuSutun={
                 First:[
                    
                 ],
                 Second:[
                 ]
-            },
+            }
           
-        };
+
         
-    
-}
-}
 </script>
 

@@ -1,119 +1,116 @@
 <template>
   <div class="highlights">
-      <div class="column-double">
-          <div class="sc-exqIPC leuDbu tnm__line-root">
-              <ul class="liste">
-                  <li class="liste-item" v-for="item in ilkSutun.First" v-bind:key="item.id">
-                      <NuxtLink :to="item.link" class="link" >
-                          {{item.title}}
-                      </NuxtLink>
-                  </li>
-              </ul>
-          </div>
-         
-           <div>
-              <div class="sc-exqIPC leuDbu">
-                  <ul class="liste2">
-                      <li class="liste-item" v-for="item in ucuncuSutun.Second" v-bind:key="item.id">
-                          <NuxtLink :to="item.link" class="link">
-                              {{item.title}}
-                          </NuxtLink>
-                          </li>
-                  </ul>
-              </div>
-          </div>
+    <div class="column-double">
+      <div class="sc-exqIPC leuDbu tnm__line-root">
+        <ul class="liste">
+          <li class="liste-item" v-for="item in ilkSutun.First">
+            <NuxtLink :to="item.link" class="link">
+              {{ item.title }}
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
-      <div class="column-double">
-          <div class="sc-exqIPC leuDbu tnm__line-root">
-              <ul class="liste">
-                  <li class="liste-item" v-for="item in ikinciSutun.First" v-bind:key="item.id">
-                      <NuxtLink :to="item.link" class="link" >
-                          {{item.title}}
-                      </NuxtLink>
-                  </li>
-              </ul>
-          </div>
-         
-           <div>
-              <div class="sc-exqIPC leuDbu">
-                  <ul class="liste2">
-                      <li class="liste-item" v-for="item in ikinciSutun.Second" v-bind:key="item.id">
-                          <NuxtLink :to="item.link" class="link">
-                              {{item.title}}
-                          </NuxtLink>
-                          </li>
-                  </ul>
-              </div>
-          </div>
+
+      <div>
+        <div class="sc-exqIPC leuDbu">
+          <ul class="liste2">
+            <li class="liste-item" v-for="item in ucuncuSutun.Second">
+              <NuxtLink :to="item.link" class="link">
+                {{ item.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="row">
-          <div class="sc-exqIPC leuDbu tnm__line-root">
-              <ul class="liste">
-                  <li class="liste-item" v-for="item in ucuncuSutun.First" v-bind:key="item.id">
-                      <NuxtLink :to="item.link" class="link" >
-                          {{item.title}}
-                      </NuxtLink>
-                  </li>
-              </ul>
-          </div>
-         
-           <div>
-              <div class="sc-exqIPC leuDbu">
-                  <ul class="liste2">
-                      <li class="liste-item" v-for="item in ucuncuSutun.Second" v-bind:key="item.id">
-                          <NuxtLink :to="item.link" class="link">
-                              {{item.title}}
-                          </NuxtLink>
-                          </li>
-                  </ul>
-              </div>
-          </div>
+    </div>
+    <div class="column-double">
+      <div class="sc-exqIPC leuDbu tnm__line-root">
+        <ul class="liste">
+          <li class="liste-item" v-for="item in ikinciSutun.First">
+            <NuxtLink :to="item.link" class="link">
+              {{ item.title }}
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
+
+      <div>
+        <div class="sc-exqIPC leuDbu">
+          <ul class="liste2">
+            <li class="liste-item" v-for="item in ikinciSutun.Second">
+              <NuxtLink :to="item.link" class="link">
+                {{ item.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="sc-exqIPC leuDbu tnm__line-root">
+        <ul class="liste">
+          <li class="liste-item" v-for="item in ucuncuSutun.First">
+            <NuxtLink :to="item.link" class="link">
+              {{ item.title }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="sc-exqIPC leuDbu">
+          <ul class="liste2">
+            <li class="liste-item" v-for="item in ucuncuSutun.Second">
+              <NuxtLink :to="item.link" class="link">
+                {{ item.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-<script>
-export default {
-  props: {
-      ilkSutun: {
-          First: {
-              title: String,
-              link: String,
-          },
-          Second: {
-              title: String,
-              link: String,
-          }
-      },
-      ikinciSutun: {
-          First: {
-              title: String,
-              link: String,
-          },
-          Second: {
-              title: String,
-              link: String,
-          }
-      },
-      ucuncuSutun: {
-          First: {
-              title: String,
-              link: String,
-          },
-          Second: {
-              title: String,
-              link: String,
-          }
-      }
+
+<script setup>
+const props = defineProps({
+  ilkSutun: {
+    First: {
+      title: String,
+      link: String,
+    },
+    Second: {
+      title: String,
+      link: String,
+    }
   },
-  methods: {
-  isimlendir(event) {
-      console.log("asdasd");
-      if(ilkSutun.Second[0] == null){
-          document.getElementById("column").classList.add("column-simple");
-      }
-      return true;
+  ikinciSutun: {
+    First: {
+      title: String,
+      link: String,
+    },
+    Second: {
+      title: String,
+      link: String,
+    }
+  },
+  ucuncuSutun: {
+    First: {
+      title: String,
+      link: String,
+    },
+    Second: {
+      title: String,
+      link: String,
+    }
   }
-},
+})
+function isimlendir(event) {
+  console.log("asdasd");
+  if (ilkSutun.Second[0] == null) {
+    document.getElementById("column").classList.add("column-simple");
+  }
+  return true;
 }
 </script>
 <style>
@@ -194,8 +191,8 @@ export default {
   .column-double>a,
   .title,
   .column2>a {
-      text-shadow: unset;
-      color: black;
+    text-shadow: unset;
+    color: black;
   }
 }
 
