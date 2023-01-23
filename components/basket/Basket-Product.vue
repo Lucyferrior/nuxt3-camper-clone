@@ -41,16 +41,14 @@
         </div>
     </div>
 </template>
-<script>
-    export default{
-        props:{
-            title: String,
+<script setup lang="ts">
+    const props = defineProps({
+        title: String,
             subtitle: String,
             size: String,
             price: String,
             src_link: String
-        }
-    }
+    })
 </script>
 <style>
 .beden::before{

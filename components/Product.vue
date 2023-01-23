@@ -3,7 +3,7 @@
         <a>
             <router-link to="product-details">
                 <div class="gridPhoto">
-                    <div class="grid-images" v-if="(product.type != 'video')">
+                    <div class="grid-images" v-if="(product.typ != 'vide')">
                         <picture class="style-image">
                             <img v-bind:src="product.src_link_default" class="style-image" width="326" height="489">
                         </picture>
@@ -15,8 +15,8 @@
                     </div>
                     <div class="grid-images" v-else>
                         <div class="vsc-controller"></div>
-                        <video class="style_gridVideo__1G7y7 style-image" autoplay="" loop="" 
-                            title="Video of K100743-025" muted="" playsinline="">
+                        <video class="style_gridVideo__1G7y7 style-image" 
+                            title="Video of K100743-025">
                             <source :src="product.src_link_default" type="video/webm">
                         </video>
                     </div>
@@ -135,24 +135,19 @@ video{
     text-transform: uppercase;
 }
 </style>
-<script>
-export default {
-    data() {
-        return {
-            show_default: true,
-        }
-    },
-    props: {
-        sizes: true,
-        product: {
+<script setup lang="ts">
+    const show_default  = ref(true)
+    const props = defineProps({
+        sizes:Boolean,
+        product:{
+            required: true,
             type: Object,
+            typ: String,
             id: Number,
             title: String,
             price: String,
             src_link_default: String,
             src_link_second: String,
-            type: String
         }
-    }
-}
+    })
 </script>

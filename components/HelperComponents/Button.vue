@@ -16,14 +16,17 @@
     text-align: center;
     padding: 10px 20px;
 }
-.reverse{
+
+.reverse {
     background-color: white;
     color: black;
 }
-.reverse:hover{
+
+.reverse:hover {
     background-color: black;
-    color:white;
+    color: white;
 }
+
 .button {
     color: white;
     background-color: black;
@@ -34,15 +37,11 @@
     background-color: white;
     border: 1px solid black;
 }
-
-
 </style>
-<script>
-export default {
-    props: {
-        text: String,
-        link: String,
-        classes: String
-    }
-}
+<script setup lang="ts">
+const props = defineProps({
+    text: String,
+    link: String,
+    classes: String
+})
 </script>
