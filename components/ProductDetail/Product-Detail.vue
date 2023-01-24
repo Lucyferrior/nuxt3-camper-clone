@@ -126,6 +126,9 @@
 }
 </style>
 <script setup lang="ts">
+const props = defineProps({
+    productId: String
+})
 const products = ref([
                 {
                     id: 1,

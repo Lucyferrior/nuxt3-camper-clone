@@ -11,6 +11,8 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
-    "firebase": "^9.16.0"
+    "firebase": "^9.16.0",
+    "firebase-functions": "^4.2.0",
+    "h3": "^1.0.2"
   }
 }
