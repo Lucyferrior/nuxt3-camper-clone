@@ -3,6 +3,9 @@
         <a>
             <router-link :to="(generateLink())">
                 <div class="gridPhoto">
+                    <div class="category-name">
+                        <p>{{product.category}}</p>
+                    </div>
                     <div class="grid-images" v-if="(product.typ != 'video')">
                         <picture class="style-image">
                             <img v-bind:src="product.src_link_default" class="style-image" width="326" height="489">
@@ -55,10 +58,11 @@
             price: String,
             src_link_default: String,
             src_link_second: String,
+            category: String
         }
     })
     function generateLink(){
-        return "product-details/" + props.product.id 
+        return "/product-details/" + props.product.id 
     }
 </script>
 <style scoped>
@@ -87,7 +91,18 @@ video{
     visibility: visible;
     z-index: 2;
 }
-
+.category-name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.category-name > p{
+    font-size: .8em;
+    padding: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
 .size_number {
     padding: 2% 5%;
 }

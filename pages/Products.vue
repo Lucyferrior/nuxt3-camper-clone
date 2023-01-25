@@ -50,14 +50,13 @@
                     </div>
                 </div>
             </div>
-
-            <Product v-for="item in products" v-bind:key="item.id" :product="item" />
-
+            <ProductList :products="products"/>
+            
         </div>
 
     </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { db } from '@/firebase'
 import { collection, getDocs, onSnapshot, addDoc, doc, deleteDoc, query, orderBy, limit } from 'firebase/firestore'
@@ -65,7 +64,7 @@ const productsCollectionRef = collection(db, 'Products',)
 const products = ref([]);
 onMounted(() => {
     onSnapshot(productsCollectionRef, (QuerySnapshot) => {
-        const fbProducts = []
+        const fbProducts:any = []
         QuerySnapshot.forEach((doc) => {
             const product = {
                 id: doc.id,
@@ -73,7 +72,9 @@ onMounted(() => {
                 price: doc.data().price,
                 src_link_default: doc.data().src_link_default,
                 src_link_second: doc.data().src_link_second,
+                category: doc.data().Kategori,
                 typ: doc.data().type
+
             }
             console.log(product)
             fbProducts.push(product)
@@ -100,7 +101,7 @@ function addData() {
 //     deleteDoc(doc(productsCollectionRef, id ))
 // }
 </script>
-<style scoped>
+<style>
 #product_container {
     display: flex;
     row-gap: 0;

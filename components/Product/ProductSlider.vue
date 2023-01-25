@@ -85,18 +85,18 @@ const props = defineProps({
             src_link_default: String,
             src_link_second: String,
         }
-})
-function hareket_hesapla() {
-            var kaydir = document.querySelector(".product")?.offsetWidth
-            return kaydir;
-        }
+ })
+// function hareket_hesapla() {
+//             var kaydir = document.querySelector(".product")?.//offsetWidth
+//             return 450;
+//         }
     function sola_cek() {
-            _left_value -= hareket_hesapla();
+            _left_value -= 450;
         }
         function saga_cek() {
-            var kaydir = hareket_hesapla();
+            var kaydir = 450
             if( _left_value < 0){
-                _left_value += hareket_hesapla();
+                _left_value += kaydir
             }else{
                 _left_value = 0
             }
