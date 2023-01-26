@@ -1,21 +1,25 @@
 <template>
     <div class="product" @mouseover="show_default = false" @mouseleave="show_default = true">
         <a>
-            <router-link to="product-details">
+            <router-link :to="(generateLink())">
                 <div class="gridPhoto">
-                    <div class="grid-images" v-if="(product.typ != 'vide')">
+                    <div class="category-name">
+                        <p>{{product.category}}</p>
+                    </div>
+                    <div class="grid-images" v-if="(product.typ != 'video')">
                         <picture class="style-image">
                             <img v-bind:src="product.src_link_default" class="style-image" width="326" height="489">
                         </picture>
 
 
-                        <picture class="style-image_hover" v-if="!show_default" @mouseleave="show_default = true">
+                        <picture class="style-image_hover" v-if="!show_default" @mouseleave="show_default = true;">
                             <img v-bind:src="product.src_link_second" class="style-image_hover" loading="eager">
                         </picture>
                     </div>
                     <div class="grid-images" v-else>
                         <div class="vsc-controller"></div>
                         <video class="style_gridVideo__1G7y7 style-image" 
+                            autoplay="true" loop="true" muted="true" playsinline="true"
                             title="Video of K100743-025">
                             <source :src="product.src_link_default" type="video/webm">
                         </video>
@@ -41,6 +45,26 @@
         </a>
     </div>
 </template>
+<script setup lang="ts">
+    const show_default  = ref(true)
+    const props = defineProps({
+        sizes:Boolean,
+        product:{
+            required: true,
+            type: Object,
+            typ: String,
+            id: String,
+            title: String,
+            price: String,
+            src_link_default: String,
+            src_link_second: String,
+            category: String
+        }
+    })
+    function generateLink(){
+        return "/product-details/" + props.product.id 
+    }
+</script>
 <style scoped>
 .product {
     display: block;
@@ -67,7 +91,18 @@ video{
     visibility: visible;
     z-index: 2;
 }
-
+.category-name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.category-name > p{
+    font-size: .8em;
+    padding: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
 .size_number {
     padding: 2% 5%;
 }
@@ -135,19 +170,3 @@ video{
     text-transform: uppercase;
 }
 </style>
-<script setup lang="ts">
-    const show_default  = ref(true)
-    const props = defineProps({
-        sizes:Boolean,
-        product:{
-            required: true,
-            type: Object,
-            typ: String,
-            id: Number,
-            title: String,
-            price: String,
-            src_link_default: String,
-            src_link_second: String,
-        }
-    })
-</script>
