@@ -1,49 +1,79 @@
 <template>
   <div class="highlights">
-    <div class="column-double">
-      <div class="sc-exqIPC leuDbu tnm__line-root">
-        <ul class="liste">
-          <li class="liste-item" v-for="item in ilkSutun.First">
-            <NuxtLink :to="item.link" class="link">
-              {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
 
-      <div>
-        <div class="sc-exqIPC leuDbu">
-          <ul class="liste2">
-            <li class="liste-item" v-for="item in ucuncuSutun.Second">
-              <NuxtLink :to="item.link" class="link">
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="column-double">
-      <div class="sc-exqIPC leuDbu tnm__line-root">
-        <ul class="liste">
-          <li class="liste-item" v-for="item in ikinciSutun.First">
-            <NuxtLink :to="item.link" class="link">
-              {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
+      <div class="column-double">
+          <div class="sc-exqIPC leuDbu tnm__line-root">
+              <ul class="liste">
+                  <li class="liste-item" v-for="item in ilkSutun.First" v-bind:key="item.id">
+                      <NuxtLink to="/products" class="link" >
+                          {{item.title}}
+                      </NuxtLink>
+                  </li>
+              </ul>
+          </div>
+         
+           <div>
+              <div class="sc-exqIPC leuDbu">
+                  <ul class="liste2">
+                      <li class="liste-item" v-for="item in ucuncuSutun.Second" v-bind:key="item.id">
+                        <NuxtLink to="/products" class="link" >
 
-      <div>
-        <div class="sc-exqIPC leuDbu">
-          <ul class="liste2">
-            <li class="liste-item" v-for="item in ikinciSutun.Second">
-              <NuxtLink :to="item.link" class="link">
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+                              {{item.title}}
+                          </NuxtLink>
+                          </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="column-double">
+          <div class="sc-exqIPC leuDbu tnm__line-root">
+              <ul class="liste">
+                  <li class="liste-item" v-for="item in ikinciSutun.First" v-bind:key="item.id">
+                    <NuxtLink to="/products" class="link" >
+
+                          {{item.title}}
+                      </NuxtLink>
+                  </li>
+              </ul>
+          </div>
+         
+           <div>
+              <div class="sc-exqIPC leuDbu">
+                  <ul class="liste2">
+                      <li class="liste-item" v-for="item in ikinciSutun.Second" v-bind:key="item.id">
+                        <NuxtLink to="/products" class="link" >
+
+                              {{item.title}}
+                          </NuxtLink>
+                          </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="sc-exqIPC leuDbu tnm__line-root">
+              <ul class="liste">
+                  <li class="liste-item" v-for="item in ucuncuSutun.First" v-bind:key="item.id">
+                    <NuxtLink to="/products" class="link" >
+
+                          {{item.title}}
+                      </NuxtLink>
+                  </li>
+              </ul>
+          </div>
+         
+           <div>
+              <div class="sc-exqIPC leuDbu">
+                  <ul class="liste2">
+                      <li class="liste-item" v-for="item in ucuncuSutun.Second" v-bind:key="item.id">
+                        <NuxtLink to="/products" class="link" >
+
+                              {{item.title}}
+                          </NuxtLink>
+                          </li>
+                  </ul>
+              </div>
+          </div>
       </div>
     </div>
     <div class="row">
