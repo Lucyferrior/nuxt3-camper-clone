@@ -45,7 +45,15 @@ export function getSearchInTitle(key: string) {
   });
   return newProducts
 }
-
+export function getSearchById(key:string){
+  products.value.forEach((element: any) => {
+    var id = element.id;
+    if(id == key)
+    {
+      return element
+    }
+  });
+}
 export function getAllProducts() {
   return products;
 }

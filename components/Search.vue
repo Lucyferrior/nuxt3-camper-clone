@@ -114,7 +114,6 @@
 import { ref, onMounted } from 'vue';
 import { db } from '@/firebase'
 import { collection, getDocs, onSnapshot, addDoc, doc, deleteDoc, query, orderBy, limit, FieldValue } from 'firebase/firestore'
-import { it } from 'node:test';
 const productsCollectionRef = collection(db, 'Products',)
 var products = ref([])
 var _products: Object[] = []
@@ -122,8 +121,6 @@ var placeholder: HTMLSpanElement
 var searchInput: HTMLInputElement
 
 async function searchInTitle() {
-    
-
     var deneme = getSearchInTitle(searchInput.value)
     console.log(deneme)
     products.value = deneme

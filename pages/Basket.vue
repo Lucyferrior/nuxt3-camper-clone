@@ -18,6 +18,7 @@
                 </a>
             </div>
             <div class="loading">
+                <button @click="refresh()">refresh</button>
                 <div class="container">
                     <BasketProduct title="Runner K21" subtitle="27205-247" price="2049" size="39"
                         src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg" />
@@ -25,6 +26,8 @@
                         src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg" />
                     <BasketProduct title="Runner K21" subtitle="27205-247" price="2049" size="39"
                         src_link="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-006_LF.jpg" />
+                    <BasketProduct v-for="item in sepettekiUrunler" title="title" subtitle="asdasd4" price="222"
+                        :size="11" />
                 </div>
             </div>
             <div class="related">
@@ -47,7 +50,52 @@
         <BasketSepetOnay />
     </div>
 </template>
+<script setup >
+const degerler = ref([])
+const sepettekiUrunler = async() => {
+        let formData = new FormData();
+        
+        formData.append('Product_ID', form.Product_ID);
+        formData.append('Basket_ID', form.Basket_ID);
+        formData.append('Size', form.Size);
 
+        await BrewMethodsAPI.store( formData )
+    }
+
+
+const products = ref([
+    {
+        id: 1,
+        title: "Twins",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 2,
+        title: "Runner K21",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 3,
+        title: "Runner",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 3,
+        title: "Runner",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+    {
+        id: 3,
+        title: "Runner",
+        price: 2499,
+        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
+    },
+])
+</script>
 <style>
 .related_nav_item_active {
     text-decoration: underline;
@@ -169,37 +217,3 @@ p {
     margin-bottom: 1em;
 }
 </style>
-<script setup lang="ts">
-const products = ref([
-    {
-        id: 1,
-        title: "Twins",
-        price: 2499,
-        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-    },
-    {
-        id: 2,
-        title: "Runner K21",
-        price: 2499,
-        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-    },
-    {
-        id: 3,
-        title: "Runner",
-        price: 2499,
-        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-    },
-    {
-        id: 3,
-        title: "Runner",
-        price: 2499,
-        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-    },
-    {
-        id: 3,
-        title: "Runner",
-        price: 2499,
-        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNiYWdncmV5JA==/L8103-001_L.jpg",
-    },
-])
-</script>

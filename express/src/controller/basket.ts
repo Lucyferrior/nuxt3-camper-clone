@@ -7,7 +7,7 @@ const router = express.Router();
 const sql = require("mssql");
 
 router.get<{}, any>("/", async (req, res) => {
-  res.send(await basketService.getAllBasket()).sendStatus(200);
+  res.send(await basketService.getAllBasket());
 });
 router.get<{}, any>("/:id", async (req: Request, res: Response) => {
   var value: number = parseInt(req.params.id);

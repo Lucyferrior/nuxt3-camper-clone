@@ -131,24 +131,28 @@ import { db } from '@/firebase'
 import { collection, getDocs, onSnapshot, addDoc, doc, deleteDoc, query, orderBy, limit } from 'firebase/firestore'
 const productsCollectionRef = collection(db, 'Products',)
 const products = ref([]);
+var selectedProduct = ref([])
+const route = useRoute()
 onMounted(() => {
-    onSnapshot(productsCollectionRef, (QuerySnapshot) => {
-        const fbProducts:any = []
-        QuerySnapshot.forEach((doc) => {
-            const product = {
-                id: doc.id,
-                title: doc.data().title,
-                price: doc.data().price,
-                src_link_default: doc.data().src_link_default,
-                src_link_second: doc.data().src_link_second,
-                src_link3: doc.data().src_link3
+    // onSnapshot(productsCollectionRef, (QuerySnapshot) => {
+    //     const fbProducts:any = []
+    //     QuerySnapshot.forEach((doc) => {
+    //         const product = {
+    //             id: doc.id,
+    //             title: doc.data().title,
+    //             price: doc.data().price,
+    //             src_link_default: doc.data().src_link_default,
+    //             src_link_second: doc.data().src_link_second,
+    //             src_link3: doc.data().src_link3
                 
-            }
-            console.log(product)
-            fbProducts.push(product)
-        })
-        products.value = fbProducts
-    })
+    //         }
+    //         console.log(product)
+    //         fbProducts.push(product)
+    //     })
+    //     products.value = fbProducts
+    // })
+    takeThem()
+    products.value = getAllProducts()
 })
 const props = defineProps({
     productId: String

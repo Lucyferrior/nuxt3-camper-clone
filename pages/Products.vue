@@ -63,41 +63,28 @@ import { collection, getDocs, onSnapshot, addDoc, doc, deleteDoc, query, orderBy
 const productsCollectionRef = collection(db, 'Products',)
 const products = ref([]);
 onMounted(() => {
-    onSnapshot(productsCollectionRef, (QuerySnapshot) => {
-        const fbProducts:any = []
-        QuerySnapshot.forEach((doc) => {
-            const product = {
-                id: doc.id,
-                title: doc.data().title,
-                price: doc.data().price,
-                src_link_default: doc.data().src_link_default,
-                src_link_second: doc.data().src_link_second,
-                category: doc.data().Kategori,
-                typ: doc.data().type
 
-            }
-            console.log(product)
-            fbProducts.push(product)
-        })
-        products.value = fbProducts
-    })
-    //addData()
+    if(products.value.length ==0){
+        takeThem()
+    }
+    products.value = getAllProducts()
+
 })
 
-const newDataContent = ref('')
+// const newDataContent = ref('')
 
-function addData() {
-    addDoc(productsCollectionRef, {
-        title: "Traktori",
-        price: 4299,
-        src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K400667-002_LF.jpg",
-        src_link_second: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K400667-002_CF.jpg",
-        src_link3:"https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K400667-002_DF.jpg",
-        bedenler:[41,42,43,44]
-    })
-    newDataContent.value = ''
-}
-// const deleteData = id => {
+// // function addData() {
+// //     addDoc(productsCollectionRef, {
+// //         title: "Traktori",
+// //         price: 4299,
+// //         src_link_default: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K400667-002_LF.jpg",
+// //         src_link_second: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K400667-002_CF.jpg",
+// //         src_link3:"https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K400667-002_DF.jpg",
+// //         bedenler:[41,42,43,44]
+// //     })
+// //     newDataContent.value = ''
+// }
+// // const deleteData = id => {
 //     deleteDoc(doc(productsCollectionRef, id ))
 // }
 </script>
