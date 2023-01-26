@@ -76,30 +76,6 @@
           </div>
       </div>
     </div>
-    <div class="row">
-      <div class="sc-exqIPC leuDbu tnm__line-root">
-        <ul class="liste">
-          <li class="liste-item" v-for="item in ucuncuSutun.First">
-            <NuxtLink :to="item.link" class="link">
-              {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="sc-exqIPC leuDbu">
-          <ul class="liste2">
-            <li class="liste-item" v-for="item in ucuncuSutun.Second">
-              <NuxtLink :to="item.link" class="link">
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script setup>
